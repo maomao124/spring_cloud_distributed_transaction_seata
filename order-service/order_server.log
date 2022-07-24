@@ -1,0 +1,22 @@
+2022-07-24 21:44:22.311  INFO 2552 --- [main] mao.orderservice.mapper.OrderMapperTest  : No active profile set, falling back to default profiles: default
+2022-07-24 21:44:23.103  INFO 2552 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c9980598-3c64-3ad2-bd66-3069b5b78a47
+2022-07-24 21:44:23.985  INFO 2552 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-24 21:44:24.198  INFO 2552 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-24 21:44:24.875  WARN 2552 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-24 21:44:24.875  INFO 2552 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-24 21:44:24.881  WARN 2552 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-24 21:44:24.881  INFO 2552 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-24 21:44:25.136  INFO 2552 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-24 21:44:25.548  INFO 2552 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-24 21:44:26.237  INFO 2552 --- [main] mao.orderservice.mapper.OrderMapperTest  : Started OrderMapperTest in 4.839 seconds (JVM running for 5.86)
+2022-07-24 21:44:26.814 DEBUG 2552 --- [main] m.o.mapper.OrderMapper.selectList        : ==>  Preparing: SELECT id,user_id,commodity_code,count,money FROM order_tbl
+2022-07-24 21:44:26.842 DEBUG 2552 --- [main] m.o.mapper.OrderMapper.selectList        : ==> Parameters: 
+2022-07-24 21:44:26.875 DEBUG 2552 --- [main] m.o.mapper.OrderMapper.selectList        : <==      Total: 0
+2022-07-24 21:44:26.895  WARN 2552 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-24 21:44:26.895  WARN 2552 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-24 21:44:26.895  WARN 2552 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-24 21:44:26.896  WARN 2552 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-24 21:44:26.897  INFO 2552 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-24 21:44:33.276  INFO 2552 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-24 21:44:33.280  INFO 2552 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-24 21:44:33.287  INFO 2552 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
