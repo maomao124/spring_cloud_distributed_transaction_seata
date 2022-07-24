@@ -1,0 +1,71 @@
+# account-service 配置文件
+
+spring:
+
+  application:
+    name: account-service
+
+
+  # 配置数据源
+  datasource:
+    # 配置数据源-druid
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
+      username: root
+      password: 20010713
+
+
+
+  cloud:
+      nacos:
+        discovery:
+          # nacos 服务端地址
+          server-addr: localhost:8848
+          # 配置集群名称，也就是机房位置
+          #cluster-name: HZ
+          # namespace: 5544c4b1-2899-4915-94af-f9940c01c2b9
+          # 是否为临时实例，true为临时实例
+          ephemeral: false
+
+
+
+ribbon:
+  eager-load:
+    # 开启饥饿加载
+    enabled: true
+
+
+
+# 设置日志级别，root表示根节点，即整体应用日志级别
+logging:
+ # 日志输出到文件的文件名
+  file:
+     name: account_server.log
+
+  # 设置日志组
+  group:
+  # 自定义组名，设置当前组中所包含的包
+    mao_pro: mao
+  level:
+    org.springframework.cloud.alibaba.seata.web: debug
+    root: info
+    # 为对应组设置日志级别
+    mao_pro: debug
+    # 日志输出格式
+# pattern:
+  # console: "%d %clr(%p) --- [%16t] %clr(%-40.40c){cyan} : %m %n"
+
+
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+
+
+server:
+  port: 8083
+
+
