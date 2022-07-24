@@ -71,7 +71,7 @@ Project name(项目名称)：spring_cloud_distributed_transaction_seata
 <br>
 <br>
 
-<button id="button" onclick="get()">点击发送ajax请求</button>
+<button id="button" onclick="post()">点击发送ajax请求</button>
 
 <br>
 <br>
@@ -89,7 +89,7 @@ Project name(项目名称)：spring_cloud_distributed_transaction_seata
     var count = document.getElementById("count")
     var money = document.getElementById("money")
 
-    function get()
+    function post()
     {
         console.log("发起ajax请求")
 
@@ -117,7 +117,7 @@ Project name(项目名称)：spring_cloud_distributed_transaction_seata
             alert("请求超时，请稍后再试！");
         }
         //初始化，设置请求方式和url
-        xhr.open("get", "http://localhost:8082/order?userId=" + userId.value + "&commodityCode=" + commodityCode.value + "&count=" + count.value + "&money=" + money.value);
+        xhr.open("post", "http://localhost:8082/order?userId=" + userId.value + "&commodityCode=" + commodityCode.value + "&count=" + count.value + "&money=" + money.value);
         //设置状态为正在发送
         isSending = true;
         //发送异步请求
@@ -150,7 +150,7 @@ Project name(项目名称)：spring_cloud_distributed_transaction_seata
         //axios发起ajax请求
         axios({
             //请求的方式：
-            method: "get",
+            method: "post",
             //请求的url:
             url: "http://localhost:8082/order?userId=user202103032042012&commodityCode=100202003032041&count=2&money=200",
             //url参数：
@@ -185,7 +185,7 @@ Project name(项目名称)：spring_cloud_distributed_transaction_seata
                 data:
                     {},
                 //请求类型：
-                type: "get",
+                type: "post",
                 //响应的数据类型：
                 dataType: "json",
                 //请求成功的回调函数：
