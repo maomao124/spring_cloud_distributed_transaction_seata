@@ -11,7 +11,7 @@ spring:
     # 配置数据源-druid
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
+      url: jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
       username: root
       password: 20010713
 
