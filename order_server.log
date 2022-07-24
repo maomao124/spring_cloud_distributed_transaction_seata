@@ -304,3 +304,21 @@ Consider defining a bean of type 'mao.orderservice.feign.AccountFeignClient' in 
 2022-07-24 21:16:54.525  INFO 15644 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2022-07-24 21:16:54.527  INFO 15644 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-07-24 21:16:54.528  INFO 15644 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-24 21:16:57.648  INFO 6868 --- [main] m.orderservice.OrderServiceApplication   : No active profile set, falling back to default profiles: default
+2022-07-24 21:16:58.139  INFO 6868 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=20c2df8f-f06f-3cd0-be15-f7ef5fafa39c
+2022-07-24 21:16:58.353  INFO 6868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-07-24 21:16:58.360  INFO 6868 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-24 21:16:58.360  INFO 6868 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-24 21:16:58.473  INFO 6868 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-24 21:16:58.473  INFO 6868 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 812 ms
+2022-07-24 21:16:58.786  INFO 6868 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-24 21:16:58.874  INFO 6868 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-24 21:16:59.155  WARN 6868 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-24 21:16:59.156  INFO 6868 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-24 21:16:59.158  WARN 6868 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-24 21:16:59.158  INFO 6868 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-24 21:16:59.236  INFO 6868 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-24 21:16:59.418  INFO 6868 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-24 21:16:59.762  INFO 6868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-07-24 21:16:59.770  INFO 6868 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP order-service 192.168.202.1:8082 register finished
+2022-07-24 21:16:59.875  INFO 6868 --- [main] m.orderservice.OrderServiceApplication   : Started OrderServiceApplication in 2.985 seconds (JVM running for 3.551)
