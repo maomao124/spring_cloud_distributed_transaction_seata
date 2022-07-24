@@ -3,6 +3,8 @@ package mao.orderservice.service.impl;
 import feign.FeignException;
 import lombok.extern.slf4j.Slf4j;
 import mao.orderservice.entity.Order;
+import mao.orderservice.feign.AccountFeignClient;
+import mao.orderservice.feign.StorageFeignClient;
 import mao.orderservice.mapper.OrderMapper;
 import mao.orderservice.service.OrderService;
 import org.springframework.stereotype.Service;
@@ -29,9 +31,9 @@ public class OrderServiceImpl implements OrderService
 {
 
     @Resource
-    private AccountClient accountClient;
+    private AccountFeignClient accountFeignClient;
     @Resource
-    private StorageClient storageClient;
+    private StorageFeignClient storageFeignClient;
     @Resource
     private OrderMapper orderMapper;
 
@@ -44,9 +46,9 @@ public class OrderServiceImpl implements OrderService
             // 创建订单
             orderMapper.insert(order);
             // 扣用户余额
-            accountClient.deduct(order.getUserId(), order.getMoney());
+            accountFeignClient.deduct(order.getUserId(), order.getMoney());
             // 扣库存
-            storageClient.deduct(order.getCommodityCode(), order.getCount());
+            storageFeignClient.deduct(order.getCommodityCode(), order.getCount());
 
         }
         catch (FeignException e)
