@@ -89,6 +89,9 @@ Project name(项目名称)：spring_cloud_distributed_transaction_seata
     var count = document.getElementById("count")
     var money = document.getElementById("money")
 
+    /**
+     * 发起post请求
+     */
     function post()
     {
         console.log("发起ajax请求")
@@ -135,10 +138,11 @@ Project name(项目名称)：spring_cloud_distributed_transaction_seata
                     isSending = false;
                     console.log(xhr.response);
                     textarea.innerHTML = JSON.stringify(xhr.response);
-
+                    speech("请求成功")
                 }
                 else
                 {
+                    speech("请求失败，状态码为" + xhr.status)
                     alert("出现异常！状态码：" + xhr.status);
                 }
             }
@@ -208,6 +212,59 @@ Project name(项目名称)：spring_cloud_distributed_transaction_seata
         )
     }
 
+    /**
+     * 语音播报
+     * @param {string} text 播放内容
+     */
+    addSpeech = (text) =>
+    {
+        const speech = new SpeechSynthesisUtterance()
+        // 设置播放内容
+        speech.text = text
+        // 设置话语的音调(0-2 默认1，值越大越尖锐,越低越低沉)
+        speech.pitch = 1
+        // 设置说话的速度(0.1-10 默认1，值越大语速越快,越小语速越慢)
+        speech.rate = 1.2
+        // 设置说话的音量
+        speech.volume = 10
+        // 设置播放语言
+        speech.lang = 'zh-CN'
+
+
+        // 播放结束后调用
+        speech.onend = (event) =>
+        {
+
+        }
+        // 加入播放队列
+        window.speechSynthesis.speak(speech)
+    }
+
+    /**
+     * 停止播报，停止所有播报队列里面的语音
+     */
+    stopSpeech = () =>
+    {
+        window.speechSynthesis.cancel()
+    }
+
+
+    /**
+     * 语音播报，
+     * 如果当前如果话语当前正在被说出或者话语队列包含尚未说出的话语，则先停止播报，停止所有播报队列里面的语音，再播报
+     *
+     * @param {string} text 播放内容
+     */
+    speech = (text) =>
+    {
+        if (window.speechSynthesis.speaking || window.speechSynthesis.pending)
+        {
+            stopSpeech()
+        }
+        addSpeech(text)
+    }
+
+    speech("获取页面成功，当前时间为" + new Date().toLocaleString())
 
 </script>
 </html>
