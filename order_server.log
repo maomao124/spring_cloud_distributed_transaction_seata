@@ -288,3 +288,166 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protect
 2022-07-25 22:00:50.050  INFO 16284 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2022-07-25 22:00:50.052  INFO 16284 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-07-25 22:00:50.057  INFO 16284 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-25 22:33:32.034  INFO 2668 --- [main] m.orderservice.OrderServiceApplication   : No active profile set, falling back to default profiles: default
+2022-07-25 22:33:32.608  INFO 2668 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=49e36265-0346-35d4-84fb-39196acbeec2
+2022-07-25 22:33:32.618  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-25 22:33:32.643  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-25 22:33:32.647  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-25 22:33:32.649  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-25 22:33:32.650  INFO 2668 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+2022-07-25 22:33:32.653  INFO 2668 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
+2022-07-25 22:33:32.690  INFO 2668 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-07-25 22:33:32.693  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-25 22:33:32.699  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-25 22:33:32.971  INFO 2668 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+2022-07-25 22:33:33.068  INFO 2668 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-25 22:33:33.068  INFO 2668 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[order-service] txServiceGroup[seata-tx-service-group]
+2022-07-25 22:33:33.078  INFO 2668 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+2022-07-25 22:33:33.079  INFO 2668 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+2022-07-25 22:33:33.084  INFO 2668 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-25 22:33:33.085  INFO 2668 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[order-service] txServiceGroup[seata-tx-service-group]
+2022-07-25 22:33:33.085  INFO 2668 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+2022-07-25 22:33:33.088  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-25 22:33:33.160  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-25 22:33:33.162  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-25 22:33:33.331  INFO 2668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-07-25 22:33:33.394  INFO 2668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-25 22:33:33.394  INFO 2668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-25 22:33:33.503  INFO 2668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-25 22:33:33.503  INFO 2668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1453 ms
+2022-07-25 22:33:33.985  INFO 2668 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-25 22:33:34.093  INFO 2668 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-25 22:33:34.103  INFO 2668 --- [main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy of [dataSource]
+2022-07-25 22:33:34.412  INFO 2668 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
+2022-07-25 22:33:34.412  INFO 2668 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://localhost:3306/seata_demo
+2022-07-25 22:33:34.415  INFO 2668 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:172.17.144.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://localhost:3306/seata_demo', applicationId='order-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-25 22:33:35.007  INFO 2668 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.4.2, server version:1.4.2,channel:[id: 0x1c7b762c, L:/172.17.144.1:60839 - R:/172.17.144.1:8091]
+2022-07-25 22:33:35.017  INFO 2668 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 73 ms, version:1.4.2,role:RMROLE,channel:[id: 0x1c7b762c, L:/172.17.144.1:60839 - R:/172.17.144.1:8091]
+2022-07-25 22:33:35.987  WARN 2668 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-25 22:33:35.987  INFO 2668 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-25 22:33:35.991  WARN 2668 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-25 22:33:35.991  INFO 2668 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-25 22:33:36.093  INFO 2668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-25 22:33:36.152  INFO 2668 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-07-25 22:33:36.430  INFO 2668 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-25 22:33:36.864  INFO 2668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-07-25 22:33:36.870  INFO 2668 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP order-service 192.168.202.1:8082 register finished
+2022-07-25 22:33:37.119  INFO 2668 --- [main] m.orderservice.OrderServiceApplication   : Started OrderServiceApplication in 6.369 seconds (JVM running for 7.191)
+2022-07-25 22:34:22.371  INFO 2668 --- [http-nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-25 22:34:22.371  INFO 2668 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-25 22:34:22.377  INFO 2668 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-07-25 22:34:33.073  INFO 2668 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
+2022-07-25 22:34:33.075  INFO 2668 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:172.17.144.1:8091,msg:< RegisterTMRequest{applicationId='order-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-25 22:34:33.083  INFO 2668 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.4.2, server version:1.4.2,channel:[id: 0xbe67aaaf, L:/172.17.144.1:61123 - R:/172.17.144.1:8091]
+2022-07-25 22:34:33.083  INFO 2668 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 4 ms, version:1.4.2,role:TMROLE,channel:[id: 0xbe67aaaf, L:/172.17.144.1:61123 - R:/172.17.144.1:8091]
+2022-07-25 22:35:00.437  WARN 2668 --- [http-nio-8082-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false, version : 1.2.8, lastPacketReceivedIdleMillis : 86178
+2022-07-25 22:35:00.473 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
+2022-07-25 22:35:00.491 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
+2022-07-25 22:35:00.524 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
+2022-07-25 22:35:00.539 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
+2022-07-25 22:35:00.645  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.config.ChainedDynamicProperty  : Flipping property: account-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-07-25 22:35:00.658  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.loadbalancer.BaseLoadBalancer  : Client: account-service instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=account-service,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-25 22:35:00.663  INFO 2668 --- [http-nio-8082-exec-3] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-25 22:35:00.685  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.config.ChainedDynamicProperty  : Flipping property: account-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-07-25 22:35:00.686  INFO 2668 --- [http-nio-8082-exec-3] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client account-service initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=account-service,current list of Servers=[192.168.202.1:8083],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.202.1:8083;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@51cde400
+2022-07-25 22:35:00.941 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (401ms)
+2022-07-25 22:35:00.943 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
+2022-07-25 22:35:00.963  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.config.ChainedDynamicProperty  : Flipping property: storage-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-07-25 22:35:00.964  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.loadbalancer.BaseLoadBalancer  : Client: storage-service instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=storage-service,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-25 22:35:00.965  INFO 2668 --- [http-nio-8082-exec-3] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-25 22:35:00.972  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.config.ChainedDynamicProperty  : Flipping property: storage-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-07-25 22:35:00.973  INFO 2668 --- [http-nio-8082-exec-3] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client storage-service initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=storage-service,current list of Servers=[192.168.202.1:8081],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.202.1:8081;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@3a05dd27
+2022-07-25 22:35:01.105 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (162ms)
+2022-07-25 22:35:01.679  INFO 2668 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: account-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-07-25 22:35:01.979  INFO 2668 --- [PollingServerListUpdater-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: storage-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-07-25 22:35:19.324 DEBUG 2668 --- [http-nio-8082-exec-2] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
+2022-07-25 22:35:19.325 DEBUG 2668 --- [http-nio-8082-exec-2] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
+2022-07-25 22:35:19.326 DEBUG 2668 --- [http-nio-8082-exec-2] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
+2022-07-25 22:35:19.326 DEBUG 2668 --- [http-nio-8082-exec-2] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
+2022-07-25 22:35:19.334 DEBUG 2668 --- [http-nio-8082-exec-2] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (7ms)
+2022-07-25 22:35:19.335 DEBUG 2668 --- [http-nio-8082-exec-2] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
+2022-07-25 22:35:19.349 DEBUG 2668 --- [http-nio-8082-exec-2] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (14ms)
+2022-07-25 22:35:24.328 DEBUG 2668 --- [http-nio-8082-exec-9] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
+2022-07-25 22:35:24.328 DEBUG 2668 --- [http-nio-8082-exec-9] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
+2022-07-25 22:35:24.329 DEBUG 2668 --- [http-nio-8082-exec-9] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
+2022-07-25 22:35:24.330 DEBUG 2668 --- [http-nio-8082-exec-9] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
+2022-07-25 22:35:24.342 DEBUG 2668 --- [http-nio-8082-exec-9] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (11ms)
+2022-07-25 22:35:24.342 DEBUG 2668 --- [http-nio-8082-exec-9] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
+2022-07-25 22:35:24.355 DEBUG 2668 --- [http-nio-8082-exec-9] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (12ms)
+2022-07-25 22:35:24.698 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
+2022-07-25 22:35:24.699 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
+2022-07-25 22:35:24.700 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
+2022-07-25 22:35:24.700 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
+2022-07-25 22:35:24.705 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (5ms)
+2022-07-25 22:35:24.706 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
+2022-07-25 22:35:24.710 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (3ms)
+2022-07-25 22:35:25.129 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
+2022-07-25 22:35:25.129 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
+2022-07-25 22:35:25.130 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
+2022-07-25 22:35:25.131 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
+2022-07-25 22:35:25.136 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (5ms)
+2022-07-25 22:35:25.137 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
+2022-07-25 22:35:25.142 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (4ms)
+2022-07-25 22:35:25.618 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
+2022-07-25 22:35:25.619 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
+2022-07-25 22:35:25.620 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
+2022-07-25 22:35:25.620 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
+2022-07-25 22:35:25.626 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (5ms)
+2022-07-25 22:35:25.627 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
+2022-07-25 22:35:25.635 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (8ms)
+2022-07-25 22:35:26.111 DEBUG 2668 --- [http-nio-8082-exec-4] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
+2022-07-25 22:35:26.112 DEBUG 2668 --- [http-nio-8082-exec-4] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
+2022-07-25 22:35:26.113 DEBUG 2668 --- [http-nio-8082-exec-4] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
+2022-07-25 22:35:26.114 DEBUG 2668 --- [http-nio-8082-exec-4] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
+2022-07-25 22:35:26.120 DEBUG 2668 --- [http-nio-8082-exec-4] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (6ms)
+2022-07-25 22:35:26.121 DEBUG 2668 --- [http-nio-8082-exec-4] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
+2022-07-25 22:35:26.126 DEBUG 2668 --- [http-nio-8082-exec-4] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (5ms)
+2022-07-25 22:35:33.438 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
+2022-07-25 22:35:33.439 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
+2022-07-25 22:35:33.440 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
+2022-07-25 22:35:33.441 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
+2022-07-25 22:35:33.455 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (14ms)
+2022-07-25 22:35:33.455 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
+2022-07-25 22:35:33.470 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (14ms)
+2022-07-25 22:35:51.209 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
+2022-07-25 22:35:51.210 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : ==> Parameters: user2021030320420123(String), 100202003032041(String), 0(Integer), 0(Integer)
+2022-07-25 22:35:51.211 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
+2022-07-25 22:35:51.211 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user2021030320420123/0 HTTP/1.1
+2022-07-25 22:35:51.231 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (19ms)
+2022-07-25 22:35:51.231 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
+2022-07-25 22:35:51.245 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (13ms)
+2022-07-25 22:36:08.827 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
+2022-07-25 22:36:08.828 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 1002020030320412(String), 0(Integer), 0(Integer)
+2022-07-25 22:36:08.829 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
+2022-07-25 22:36:08.830 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
+2022-07-25 22:36:08.848 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (18ms)
+2022-07-25 22:36:08.849 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/1002020030320412/0 HTTP/1.1
+2022-07-25 22:36:08.863 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (14ms)
+2022-07-25 22:37:10.484  INFO 2668 --- [Thread-56] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-07-25 22:37:10.484  WARN 2668 --- [Thread-21] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-25 22:37:10.484  WARN 2668 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-25 22:37:10.484  WARN 2668 --- [Thread-21] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-25 22:37:10.485  WARN 2668 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-25 22:37:10.724  INFO 2668 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-25 22:37:10.725  INFO 2668 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-25 22:37:10.727  INFO 2668 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-25 22:37:16.790  WARN 2668 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-07-25 22:37:16.790  INFO 2668 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-25 22:37:16.792  INFO 2668 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-25 22:37:16.793  INFO 2668 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]
+2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]
+2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]
+2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]
+2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]) will closed
+2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]) will closed
+2022-07-25 22:37:16.802  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]
+2022-07-25 22:37:16.802  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]
+2022-07-25 22:37:16.802  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]
+2022-07-25 22:37:16.802  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]
+2022-07-25 22:37:16.802  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]) will closed
+2022-07-25 22:37:16.803  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]) will closed
