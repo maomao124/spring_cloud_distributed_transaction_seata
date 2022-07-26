@@ -44,3 +44,210 @@
 2022-07-26 12:50:25.960  INFO 11916 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:172.17.144.1:8091,msg:< RegisterTMRequest{applicationId='storage-service', transactionServiceGroup='seata-tx-service-group'} >
 2022-07-26 12:50:25.968  INFO 11916 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.4.2, server version:1.4.2,channel:[id: 0xb5a13657, L:/172.17.144.1:50165 - R:/172.17.144.1:8091]
 2022-07-26 12:50:25.968  INFO 11916 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 6 ms, version:1.4.2,role:TMROLE,channel:[id: 0xb5a13657, L:/172.17.144.1:50165 - R:/172.17.144.1:8091]
+2022-07-26 14:02:45.546  WARN 11916 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-26 14:02:45.546  WARN 11916 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-26 14:02:45.547  WARN 11916 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-26 14:02:45.548  WARN 11916 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-26 14:02:45.619  INFO 11916 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-26 14:02:45.630  INFO 11916 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-26 14:02:45.633  INFO 11916 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-26 14:02:51.657  WARN 11916 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-26 14:02:51.657  INFO 11916 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-26 14:02:51.661  INFO 11916 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-26 14:02:51.662  INFO 11916 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-26 14:02:51.665  INFO 11916 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0xb5a13657, L:/172.17.144.1:50165 ! R:/172.17.144.1:8091]
+2022-07-26 14:02:51.666  INFO 11916 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0xb5a13657, L:/172.17.144.1:50165 ! R:/172.17.144.1:8091]
+2022-07-26 14:02:51.666  INFO 11916 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0xb5a13657, L:/172.17.144.1:50165 ! R:/172.17.144.1:8091]
+2022-07-26 14:02:51.666  INFO 11916 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0xb5a13657, L:/172.17.144.1:50165 ! R:/172.17.144.1:8091]
+2022-07-26 14:02:51.666  INFO 11916 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xb5a13657, L:/172.17.144.1:50165 ! R:/172.17.144.1:8091]) will closed
+2022-07-26 14:02:51.666  INFO 11916 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x451ac940, L:/172.17.144.1:49629 ! R:/172.17.144.1:8091]
+2022-07-26 14:02:51.666  INFO 11916 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xb5a13657, L:/172.17.144.1:50165 ! R:/172.17.144.1:8091]) will closed
+2022-07-26 14:02:51.666  INFO 11916 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x451ac940, L:/172.17.144.1:49629 ! R:/172.17.144.1:8091]
+2022-07-26 14:02:51.667  INFO 11916 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x451ac940, L:/172.17.144.1:49629 ! R:/172.17.144.1:8091]
+2022-07-26 14:02:51.667  INFO 11916 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x451ac940, L:/172.17.144.1:49629 ! R:/172.17.144.1:8091]
+2022-07-26 14:02:51.667  INFO 11916 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x451ac940, L:/172.17.144.1:49629 ! R:/172.17.144.1:8091]) will closed
+2022-07-26 14:02:51.667  INFO 11916 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x451ac940, L:/172.17.144.1:49629 ! R:/172.17.144.1:8091]) will closed
+2022-07-26 14:03:00.211  INFO 1696 --- [main] m.s.StorageServiceApplication            : No active profile set, falling back to default profiles: default
+2022-07-26 14:03:00.742  INFO 1696 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=915700d7-6bb2-3380-b35c-2d5799dffea2
+2022-07-26 14:03:00.752  INFO 1696 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 14:03:00.777  INFO 1696 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 14:03:00.782  INFO 1696 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 14:03:00.784  INFO 1696 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 14:03:00.785  INFO 1696 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+2022-07-26 14:03:00.789  INFO 1696 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
+2022-07-26 14:03:00.823  INFO 1696 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-07-26 14:03:00.826  INFO 1696 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 14:03:00.832  INFO 1696 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 14:03:01.061  INFO 1696 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+2022-07-26 14:03:01.158  INFO 1696 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-26 14:03:01.158  INFO 1696 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[storage-service] txServiceGroup[seata-tx-service-group]
+2022-07-26 14:03:01.167  INFO 1696 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+2022-07-26 14:03:01.168  INFO 1696 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+2022-07-26 14:03:01.172  INFO 1696 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-26 14:03:01.173  INFO 1696 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[storage-service] txServiceGroup[seata-tx-service-group]
+2022-07-26 14:03:01.173  INFO 1696 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+2022-07-26 14:03:01.174  INFO 1696 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 14:03:01.391  INFO 1696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-26 14:03:01.398  INFO 1696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-26 14:03:01.398  INFO 1696 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-26 14:03:01.504  INFO 1696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-26 14:03:01.504  INFO 1696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1281 ms
+2022-07-26 14:03:01.566  INFO 1696 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-26 14:03:01.655  INFO 1696 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-26 14:03:01.665  INFO 1696 --- [main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy of [dataSource]
+2022-07-26 14:03:01.925  INFO 1696 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
+2022-07-26 14:03:01.925  INFO 1696 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://localhost:3306/seata_demo
+2022-07-26 14:03:01.927  INFO 1696 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:172.17.144.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://localhost:3306/seata_demo', applicationId='storage-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-26 14:03:02.065  INFO 1696 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.4.2, server version:1.4.2,channel:[id: 0xcded9861, L:/172.17.144.1:56778 - R:/172.17.144.1:8091]
+2022-07-26 14:03:02.071  INFO 1696 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 43 ms, version:1.4.2,role:RMROLE,channel:[id: 0xcded9861, L:/172.17.144.1:56778 - R:/172.17.144.1:8091]
+2022-07-26 14:03:02.373  WARN 1696 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-26 14:03:02.373  INFO 1696 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-26 14:03:02.376  WARN 1696 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-26 14:03:02.376  INFO 1696 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-26 14:03:02.471  INFO 1696 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-26 14:03:02.653  INFO 1696 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-26 14:03:02.959  INFO 1696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-26 14:03:02.964  INFO 1696 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP storage-service 192.168.202.1:8081 register finished
+2022-07-26 14:03:03.068  INFO 1696 --- [main] m.s.StorageServiceApplication            : Started StorageServiceApplication in 3.669 seconds (JVM running for 4.251)
+2022-07-26 14:04:01.154  INFO 1696 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
+2022-07-26 14:04:01.156  INFO 1696 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:172.17.144.1:8091,msg:< RegisterTMRequest{applicationId='storage-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-26 14:04:01.168  INFO 1696 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.4.2, server version:1.4.2,channel:[id: 0x0ed1608e, L:/172.17.144.1:57024 - R:/172.17.144.1:8091]
+2022-07-26 14:04:01.168  INFO 1696 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 10 ms, version:1.4.2,role:TMROLE,channel:[id: 0x0ed1608e, L:/172.17.144.1:57024 - R:/172.17.144.1:8091]
+2022-07-26 14:08:18.348  INFO 1696 --- [http-nio-8081-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-26 14:08:18.348  INFO 1696 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-26 14:08:18.352  INFO 1696 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-07-26 14:08:18.382  WARN 1696 --- [http-nio-8081-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false, version : 1.2.8, lastPacketReceivedIdleMillis : 316596
+2022-07-26 14:08:18.414  INFO 1696 --- [http-nio-8081-exec-8] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
+2022-07-26 14:08:18.427 DEBUG 1696 --- [http-nio-8081-exec-8] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
+2022-07-26 14:08:18.441 DEBUG 1696 --- [http-nio-8081-exec-8] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 9(Integer), 100202003032041(String)
+2022-07-26 14:08:18.501  INFO 1696 --- [http-nio-8081-exec-8] i.s.rm.datasource.xa.ConnectionProxyXA   : 172.17.144.1:8091:9070537907950690305-9070537907950690312 was rollbacked
+2022-07-26 14:08:18.510 ERROR 1696 --- [http-nio-8081-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: 扣减库存失败！] with root cause
+
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: BIGINT UNSIGNED value is out of range in '(`seata_demo`.`storage_tbl`.`count` - 9)'
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:371) ~[mysql-connector-java-8.0.27.jar:8.0.27]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497) ~[druid-1.2.8.jar:1.2.8]
+	at io.seata.rm.datasource.xa.PreparedStatementProxyXA.lambda$execute$2(PreparedStatementProxyXA.java:66) ~[seata-all-1.4.2.jar:1.4.2]
+	at io.seata.rm.datasource.xa.ExecuteTemplateXA.execute(ExecuteTemplateXA.java:47) ~[seata-all-1.4.2.jar:1.4.2]
+	at io.seata.rm.datasource.xa.PreparedStatementProxyXA.execute(PreparedStatementProxyXA.java:66) ~[seata-all-1.4.2.jar:1.4.2]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59) ~[mybatis-3.5.9.jar:3.5.9]
+	at jdk.proxy3/jdk.proxy3.$Proxy99.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:194) ~[mybatis-3.5.9.jar:3.5.9]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at jdk.proxy2/jdk.proxy2.$Proxy77.update(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:288) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:64) ~[mybatis-plus-core-3.5.1.jar:3.5.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148) ~[mybatis-plus-core-3.5.1.jar:3.5.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.1.jar:3.5.1]
+	at jdk.proxy2/jdk.proxy2.$Proxy82.deduct(Unknown Source) ~[na:na]
+	at mao.storageservice.service.impl.StorageServiceImpl.deduct(StorageServiceImpl.java:39) ~[classes/:na]
+	at mao.storageservice.service.impl.StorageServiceImpl$$FastClassBySpringCGLIB$$d4b5ba4e.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367) ~[spring-tx-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118) ~[spring-tx-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) ~[spring-aop-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at mao.storageservice.service.impl.StorageServiceImpl$$EnhancerBySpringCGLIB$$dd1417eb.deduct(<generated>) ~[classes/:na]
+	at mao.storageservice.controller.StorageController.deduct(StorageController.java:42) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.13.RELEASE.jar:5.2.13.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-07-26 14:17:07.086  WARN 1696 --- [http-nio-8081-exec-9] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false, version : 1.2.8, lastPacketReceivedIdleMillis : 528596
+2022-07-26 14:17:07.095  INFO 1696 --- [http-nio-8081-exec-9] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
+2022-07-26 14:17:07.095 DEBUG 1696 --- [http-nio-8081-exec-9] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
+2022-07-26 14:17:07.095 DEBUG 1696 --- [http-nio-8081-exec-9] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 1(Integer), 100202003032041(String)
+2022-07-26 14:17:07.096 DEBUG 1696 --- [http-nio-8081-exec-9] m.s.mapper.StorageMapper.deduct          : <==    Updates: 1
+2022-07-26 14:17:07.096  INFO 1696 --- [http-nio-8081-exec-9] m.s.service.impl.StorageServiceImpl      : 扣减库存成功
+2022-07-26 14:17:07.126  INFO 1696 --- [rpcDispatch_RMROLE_1_1_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.17.144.1:8091:9070537907950690316,branchId=9070537907950690322,branchType=XA,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
+2022-07-26 14:17:07.127  INFO 1696 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.17.144.1:8091:9070537907950690316 9070537907950690322 jdbc:mysql://localhost:3306/seata_demo null
+2022-07-26 14:17:07.129  INFO 1696 --- [rpcDispatch_RMROLE_1_1_32] i.s.rm.datasource.xa.ResourceManagerXA   : 172.17.144.1:8091:9070537907950690316-9070537907950690322 was committed.
+2022-07-26 14:17:07.129  INFO 1696 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
+2022-07-26 14:32:53.596  WARN 1696 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-26 14:32:53.596  WARN 1696 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-26 14:32:53.597  WARN 1696 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-26 14:32:53.597  WARN 1696 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-26 14:32:53.621  INFO 1696 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-26 14:32:53.623  INFO 1696 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-26 14:32:53.625  INFO 1696 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-26 14:32:57.685  WARN 1696 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-26 14:32:57.685  INFO 1696 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-26 14:32:57.687  INFO 1696 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-26 14:32:57.688  INFO 1696 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-26 14:32:57.689  INFO 1696 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x0ed1608e, L:/172.17.144.1:57024 ! R:/172.17.144.1:8091]
+2022-07-26 14:32:57.689  INFO 1696 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x0ed1608e, L:/172.17.144.1:57024 ! R:/172.17.144.1:8091]
+2022-07-26 14:32:57.689  INFO 1696 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x0ed1608e, L:/172.17.144.1:57024 ! R:/172.17.144.1:8091]
+2022-07-26 14:32:57.689  INFO 1696 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x0ed1608e, L:/172.17.144.1:57024 ! R:/172.17.144.1:8091]
+2022-07-26 14:32:57.689  INFO 1696 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x0ed1608e, L:/172.17.144.1:57024 ! R:/172.17.144.1:8091]) will closed
+2022-07-26 14:32:57.689  INFO 1696 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x0ed1608e, L:/172.17.144.1:57024 ! R:/172.17.144.1:8091]) will closed
+2022-07-26 14:32:57.691  INFO 1696 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0xcded9861, L:/172.17.144.1:56778 ! R:/172.17.144.1:8091]
+2022-07-26 14:32:57.691  INFO 1696 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0xcded9861, L:/172.17.144.1:56778 ! R:/172.17.144.1:8091]
+2022-07-26 14:32:57.691  INFO 1696 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0xcded9861, L:/172.17.144.1:56778 ! R:/172.17.144.1:8091]
+2022-07-26 14:32:57.691  INFO 1696 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0xcded9861, L:/172.17.144.1:56778 ! R:/172.17.144.1:8091]
+2022-07-26 14:32:57.691  INFO 1696 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xcded9861, L:/172.17.144.1:56778 ! R:/172.17.144.1:8091]) will closed
+2022-07-26 14:32:57.691  INFO 1696 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xcded9861, L:/172.17.144.1:56778 ! R:/172.17.144.1:8091]) will closed

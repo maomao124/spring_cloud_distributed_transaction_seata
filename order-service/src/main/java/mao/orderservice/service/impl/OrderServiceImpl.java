@@ -1,6 +1,7 @@
 package mao.orderservice.service.impl;
 
 import feign.FeignException;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import mao.orderservice.entity.Order;
 import mao.orderservice.feign.AccountFeignClient;
@@ -38,7 +39,7 @@ public class OrderServiceImpl implements OrderService
     private OrderMapper orderMapper;
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public Long create(Order order)
     {
         try
