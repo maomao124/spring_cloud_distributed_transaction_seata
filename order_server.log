@@ -1,453 +1,51 @@
-2022-07-25 20:22:51.411  INFO 9296 --- [main] m.orderservice.OrderServiceApplication   : No active profile set, falling back to default profiles: default
-2022-07-25 20:22:51.933  INFO 9296 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=49e36265-0346-35d4-84fb-39196acbeec2
-2022-07-25 20:22:51.942  INFO 9296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 20:22:51.963  INFO 9296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 20:22:51.968  INFO 9296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 20:22:51.969  INFO 9296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 20:22:51.970  INFO 9296 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
-2022-07-25 20:22:51.973  INFO 9296 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
-2022-07-25 20:22:52.004  INFO 9296 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
-2022-07-25 20:22:52.007  INFO 9296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 20:22:52.009  INFO 9296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configFileProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigFileProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 20:22:52.009  INFO 9296 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is file.conf
-2022-07-25 20:22:52.010  INFO 9296 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
-2022-07-25 20:22:52.019  WARN 9296 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalTransactionScanner' defined in class path resource [io/seata/spring/boot/autoconfigure/SeataAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.seata.spring.annotation.GlobalTransactionScanner]: Factory method 'globalTransactionScanner' threw exception; nested exception is java.lang.ExceptionInInitializerError
-2022-07-25 20:22:52.028  INFO 9296 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-25 20:22:52.037 ERROR 9296 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalTransactionScanner' defined in class path resource [io/seata/spring/boot/autoconfigure/SeataAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.seata.spring.annotation.GlobalTransactionScanner]: Factory method 'globalTransactionScanner' threw exception; nested exception is java.lang.ExceptionInInitializerError
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:637) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1341) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:229) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:723) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at mao.orderservice.OrderServiceApplication.main(OrderServiceApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.seata.spring.annotation.GlobalTransactionScanner]: Factory method 'globalTransactionScanner' threw exception; nested exception is java.lang.ExceptionInInitializerError
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:652) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	... 20 common frames omitted
-Caused by: java.lang.ExceptionInInitializerError: null
-	at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:166) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:144) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:116) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:108) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:104) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.proxy.Enhancer.<clinit>(Enhancer.java:69) ~[cglib-3.1.jar:na]
-	at io.seata.config.ConfigurationCache.proxy(ConfigurationCache.java:88) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.config.ConfigurationFactory.buildConfiguration(ConfigurationFactory.java:136) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.config.ConfigurationFactory.getInstance(ConfigurationFactory.java:94) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.spring.annotation.GlobalTransactionScanner.<init>(GlobalTransactionScanner.java:87) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.spring.annotation.GlobalTransactionScanner.<init>(GlobalTransactionScanner.java:143) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.spring.boot.autoconfigure.SeataAutoConfiguration.globalTransactionScanner(SeataAutoConfiguration.java:55) ~[seata-spring-boot-starter-1.4.2.jar:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	... 21 common frames omitted
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @20deea7f
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357) ~[na:na]
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
-	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199) ~[na:na]
-	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193) ~[na:na]
-	at net.sf.cglib.core.ReflectUtils$2.run(ReflectUtils.java:56) ~[cglib-3.1.jar:na]
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312) ~[na:na]
-	at net.sf.cglib.core.ReflectUtils.<clinit>(ReflectUtils.java:46) ~[cglib-3.1.jar:na]
-	... 40 common frames omitted
-
-2022-07-25 21:16:45.764  INFO 5556 --- [main] m.orderservice.OrderServiceApplication   : No active profile set, falling back to default profiles: default
-2022-07-25 21:16:46.295  INFO 5556 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=49e36265-0346-35d4-84fb-39196acbeec2
-2022-07-25 21:16:46.305  INFO 5556 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:16:46.326  INFO 5556 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:16:46.330  INFO 5556 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:16:46.332  INFO 5556 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:16:46.332  INFO 5556 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
-2022-07-25 21:16:46.335  INFO 5556 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
-2022-07-25 21:16:46.369  INFO 5556 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
-2022-07-25 21:16:46.372  INFO 5556 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:16:46.374  INFO 5556 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configFileProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigFileProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:16:46.374  INFO 5556 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is file.conf
-2022-07-25 21:16:46.375  INFO 5556 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
-2022-07-25 21:16:46.385  WARN 5556 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalTransactionScanner' defined in class path resource [io/seata/spring/boot/autoconfigure/SeataAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.seata.spring.annotation.GlobalTransactionScanner]: Factory method 'globalTransactionScanner' threw exception; nested exception is java.lang.ExceptionInInitializerError
-2022-07-25 21:16:46.393  INFO 5556 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-25 21:16:46.403 ERROR 5556 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalTransactionScanner' defined in class path resource [io/seata/spring/boot/autoconfigure/SeataAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.seata.spring.annotation.GlobalTransactionScanner]: Factory method 'globalTransactionScanner' threw exception; nested exception is java.lang.ExceptionInInitializerError
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:637) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1341) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:229) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:723) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at mao.orderservice.OrderServiceApplication.main(OrderServiceApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.seata.spring.annotation.GlobalTransactionScanner]: Factory method 'globalTransactionScanner' threw exception; nested exception is java.lang.ExceptionInInitializerError
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:652) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	... 20 common frames omitted
-Caused by: java.lang.ExceptionInInitializerError: null
-	at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:166) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:144) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:116) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:108) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:104) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.proxy.Enhancer.<clinit>(Enhancer.java:69) ~[cglib-3.1.jar:na]
-	at io.seata.config.ConfigurationCache.proxy(ConfigurationCache.java:88) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.config.ConfigurationFactory.buildConfiguration(ConfigurationFactory.java:136) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.config.ConfigurationFactory.getInstance(ConfigurationFactory.java:94) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.spring.annotation.GlobalTransactionScanner.<init>(GlobalTransactionScanner.java:87) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.spring.annotation.GlobalTransactionScanner.<init>(GlobalTransactionScanner.java:143) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.spring.boot.autoconfigure.SeataAutoConfiguration.globalTransactionScanner(SeataAutoConfiguration.java:55) ~[seata-spring-boot-starter-1.4.2.jar:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	... 21 common frames omitted
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @20deea7f
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357) ~[na:na]
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
-	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199) ~[na:na]
-	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193) ~[na:na]
-	at net.sf.cglib.core.ReflectUtils$2.run(ReflectUtils.java:56) ~[cglib-3.1.jar:na]
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312) ~[na:na]
-	at net.sf.cglib.core.ReflectUtils.<clinit>(ReflectUtils.java:46) ~[cglib-3.1.jar:na]
-	... 40 common frames omitted
-
-2022-07-25 21:18:32.565  INFO 4776 --- [main] m.orderservice.OrderServiceApplication   : No active profile set, falling back to default profiles: default
-2022-07-25 21:18:33.103  INFO 4776 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=49e36265-0346-35d4-84fb-39196acbeec2
-2022-07-25 21:18:33.113  INFO 4776 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:18:33.136  INFO 4776 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:18:33.141  INFO 4776 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:18:33.143  INFO 4776 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:18:33.143  INFO 4776 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
-2022-07-25 21:18:33.146  INFO 4776 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
-2022-07-25 21:18:33.180  INFO 4776 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
-2022-07-25 21:18:33.183  INFO 4776 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:18:33.186  INFO 4776 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configFileProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigFileProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:18:33.186  INFO 4776 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is file.conf
-2022-07-25 21:18:33.187  INFO 4776 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
-2022-07-25 21:18:33.197  WARN 4776 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalTransactionScanner' defined in class path resource [io/seata/spring/boot/autoconfigure/SeataAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.seata.spring.annotation.GlobalTransactionScanner]: Factory method 'globalTransactionScanner' threw exception; nested exception is java.lang.ExceptionInInitializerError
-2022-07-25 21:18:33.206  INFO 4776 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-25 21:18:33.216 ERROR 4776 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'globalTransactionScanner' defined in class path resource [io/seata/spring/boot/autoconfigure/SeataAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.seata.spring.annotation.GlobalTransactionScanner]: Factory method 'globalTransactionScanner' threw exception; nested exception is java.lang.ExceptionInInitializerError
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:637) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1341) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:229) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:723) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536) ~[spring-context-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.9.RELEASE.jar:2.3.9.RELEASE]
-	at mao.orderservice.OrderServiceApplication.main(OrderServiceApplication.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.seata.spring.annotation.GlobalTransactionScanner]: Factory method 'globalTransactionScanner' threw exception; nested exception is java.lang.ExceptionInInitializerError
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:652) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	... 20 common frames omitted
-Caused by: java.lang.ExceptionInInitializerError: null
-	at net.sf.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:166) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory$Generator.create(KeyFactory.java:144) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:116) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:108) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.core.KeyFactory.create(KeyFactory.java:104) ~[cglib-3.1.jar:na]
-	at net.sf.cglib.proxy.Enhancer.<clinit>(Enhancer.java:69) ~[cglib-3.1.jar:na]
-	at io.seata.config.ConfigurationCache.proxy(ConfigurationCache.java:88) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.config.ConfigurationFactory.buildConfiguration(ConfigurationFactory.java:136) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.config.ConfigurationFactory.getInstance(ConfigurationFactory.java:94) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.spring.annotation.GlobalTransactionScanner.<init>(GlobalTransactionScanner.java:87) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.spring.annotation.GlobalTransactionScanner.<init>(GlobalTransactionScanner.java:143) ~[seata-all-1.4.2.jar:1.4.2]
-	at io.seata.spring.boot.autoconfigure.SeataAutoConfiguration.globalTransactionScanner(SeataAutoConfiguration.java:55) ~[seata-spring-boot-starter-1.4.2.jar:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.13.RELEASE.jar:5.2.13.RELEASE]
-	... 21 common frames omitted
-Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @20deea7f
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357) ~[na:na]
-	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
-	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199) ~[na:na]
-	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193) ~[na:na]
-	at net.sf.cglib.core.ReflectUtils$2.run(ReflectUtils.java:56) ~[cglib-3.1.jar:na]
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312) ~[na:na]
-	at net.sf.cglib.core.ReflectUtils.<clinit>(ReflectUtils.java:46) ~[cglib-3.1.jar:na]
-	... 40 common frames omitted
-
-2022-07-25 21:59:32.305  INFO 16284 --- [main] m.orderservice.OrderServiceApplication   : No active profile set, falling back to default profiles: default
-2022-07-25 21:59:32.869  INFO 16284 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=49e36265-0346-35d4-84fb-39196acbeec2
-2022-07-25 21:59:32.879  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:32.904  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:32.908  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:32.910  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:32.910  INFO 16284 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
-2022-07-25 21:59:32.914  INFO 16284 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
-2022-07-25 21:59:32.954  INFO 16284 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
-2022-07-25 21:59:32.957  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:32.959  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configFileProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigFileProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:32.959  INFO 16284 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is file.conf
-2022-07-25 21:59:32.960  INFO 16284 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
-2022-07-25 21:59:33.007  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'serviceProperties' of type [io.seata.spring.boot.autoconfigure.properties.client.ServiceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:33.011  INFO 16284 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
-2022-07-25 21:59:33.019  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'threadFactoryProperties' of type [io.seata.spring.boot.autoconfigure.properties.client.ThreadFactoryProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:33.023  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'transportProperties' of type [io.seata.spring.boot.autoconfigure.properties.client.TransportProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:33.093  INFO 16284 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-2022-07-25 21:59:33.093  INFO 16284 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[order-service] txServiceGroup[order-service-seata-service-group]
-2022-07-25 21:59:33.102  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'rmProperties' of type [io.seata.spring.boot.autoconfigure.properties.client.RmProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:33.102  INFO 16284 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
-2022-07-25 21:59:33.103  INFO 16284 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
-2022-07-25 21:59:33.108  INFO 16284 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-2022-07-25 21:59:33.108  INFO 16284 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[order-service] txServiceGroup[order-service-seata-service-group]
-2022-07-25 21:59:33.108  INFO 16284 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
-2022-07-25 21:59:33.109  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:33.169  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:33.172  INFO 16284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 21:59:33.346  INFO 16284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-2022-07-25 21:59:33.354  INFO 16284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-25 21:59:33.355  INFO 16284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2022-07-25 21:59:33.458  INFO 16284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-25 21:59:33.458  INFO 16284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1139 ms
-2022-07-25 21:59:33.927  INFO 16284 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2022-07-25 21:59:34.020  INFO 16284 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-07-25 21:59:34.031  INFO 16284 --- [main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy of [dataSource]
-2022-07-25 21:59:34.216 ERROR 16284 --- [main] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.order-service-seata-service-group', please make sure registry config correct
-2022-07-25 21:59:34.962  WARN 16284 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-25 21:59:34.962  INFO 16284 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-25 21:59:34.966  WARN 16284 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-25 21:59:34.966  INFO 16284 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-25 21:59:35.062  INFO 16284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-25 21:59:35.121  INFO 16284 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-07-25 21:59:35.402  INFO 16284 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-25 21:59:35.963  INFO 16284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-2022-07-25 21:59:35.971  INFO 16284 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP order-service 192.168.202.1:8082 register finished
-2022-07-25 21:59:36.240  INFO 16284 --- [main] m.orderservice.OrderServiceApplication   : Started OrderServiceApplication in 5.224 seconds (JVM running for 6.02)
-2022-07-25 22:00:33.091 ERROR 16284 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.order-service-seata-service-group', please make sure registry config correct
-2022-07-25 22:00:33.122 ERROR 16284 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.order-service-seata-service-group', please make sure registry config correct
-2022-07-25 22:00:43.092 ERROR 16284 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.order-service-seata-service-group', please make sure registry config correct
-2022-07-25 22:00:43.123 ERROR 16284 --- [timeoutChecker_2_1] i.s.c.r.netty.NettyClientChannelManager  : can not get cluster name in registry config 'service.vgroupMapping.order-service-seata-service-group', please make sure registry config correct
-2022-07-25 22:00:46.062  WARN 16284 --- [Thread-14] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-07-25 22:00:46.062  WARN 16284 --- [Thread-20] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2022-07-25 22:00:46.063  WARN 16284 --- [Thread-20] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2022-07-25 22:00:46.063  WARN 16284 --- [Thread-14] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2022-07-25 22:00:46.277  INFO 16284 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-25 22:00:46.280  INFO 16284 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2022-07-25 22:00:46.282  INFO 16284 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2022-07-25 22:00:50.050  WARN 16284 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
-2022-07-25 22:00:50.050  INFO 16284 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-07-25 22:00:50.052  INFO 16284 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-07-25 22:00:50.057  INFO 16284 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2022-07-25 22:33:32.034  INFO 2668 --- [main] m.orderservice.OrderServiceApplication   : No active profile set, falling back to default profiles: default
-2022-07-25 22:33:32.608  INFO 2668 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=49e36265-0346-35d4-84fb-39196acbeec2
-2022-07-25 22:33:32.618  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:32.643  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:32.647  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:32.649  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:32.650  INFO 2668 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
-2022-07-25 22:33:32.653  INFO 2668 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
-2022-07-25 22:33:32.690  INFO 2668 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
-2022-07-25 22:33:32.693  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:32.699  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:32.971  INFO 2668 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
-2022-07-25 22:33:33.068  INFO 2668 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-2022-07-25 22:33:33.068  INFO 2668 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[order-service] txServiceGroup[seata-tx-service-group]
-2022-07-25 22:33:33.078  INFO 2668 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
-2022-07-25 22:33:33.079  INFO 2668 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
-2022-07-25 22:33:33.084  INFO 2668 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-2022-07-25 22:33:33.085  INFO 2668 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[order-service] txServiceGroup[seata-tx-service-group]
-2022-07-25 22:33:33.085  INFO 2668 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
-2022-07-25 22:33:33.088  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:33.160  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:33.162  INFO 2668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:33.331  INFO 2668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-2022-07-25 22:33:33.394  INFO 2668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-25 22:33:33.394  INFO 2668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2022-07-25 22:33:33.503  INFO 2668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-25 22:33:33.503  INFO 2668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1453 ms
-2022-07-25 22:33:33.985  INFO 2668 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2022-07-25 22:33:34.093  INFO 2668 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-07-25 22:33:34.103  INFO 2668 --- [main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy of [dataSource]
-2022-07-25 22:33:34.412  INFO 2668 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
-2022-07-25 22:33:34.412  INFO 2668 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://localhost:3306/seata_demo
-2022-07-25 22:33:34.415  INFO 2668 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:172.17.144.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://localhost:3306/seata_demo', applicationId='order-service', transactionServiceGroup='seata-tx-service-group'} >
-2022-07-25 22:33:35.007  INFO 2668 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.4.2, server version:1.4.2,channel:[id: 0x1c7b762c, L:/172.17.144.1:60839 - R:/172.17.144.1:8091]
-2022-07-25 22:33:35.017  INFO 2668 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 73 ms, version:1.4.2,role:RMROLE,channel:[id: 0x1c7b762c, L:/172.17.144.1:60839 - R:/172.17.144.1:8091]
-2022-07-25 22:33:35.987  WARN 2668 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-25 22:33:35.987  INFO 2668 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-25 22:33:35.991  WARN 2668 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-25 22:33:35.991  INFO 2668 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-25 22:33:36.093  INFO 2668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-25 22:33:36.152  INFO 2668 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-07-25 22:33:36.430  INFO 2668 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-25 22:33:36.864  INFO 2668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-2022-07-25 22:33:36.870  INFO 2668 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP order-service 192.168.202.1:8082 register finished
-2022-07-25 22:33:37.119  INFO 2668 --- [main] m.orderservice.OrderServiceApplication   : Started OrderServiceApplication in 6.369 seconds (JVM running for 7.191)
-2022-07-25 22:34:22.371  INFO 2668 --- [http-nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-25 22:34:22.371  INFO 2668 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-25 22:34:22.377  INFO 2668 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2022-07-25 22:34:33.073  INFO 2668 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
-2022-07-25 22:34:33.075  INFO 2668 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:172.17.144.1:8091,msg:< RegisterTMRequest{applicationId='order-service', transactionServiceGroup='seata-tx-service-group'} >
-2022-07-25 22:34:33.083  INFO 2668 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.4.2, server version:1.4.2,channel:[id: 0xbe67aaaf, L:/172.17.144.1:61123 - R:/172.17.144.1:8091]
-2022-07-25 22:34:33.083  INFO 2668 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 4 ms, version:1.4.2,role:TMROLE,channel:[id: 0xbe67aaaf, L:/172.17.144.1:61123 - R:/172.17.144.1:8091]
-2022-07-25 22:35:00.437  WARN 2668 --- [http-nio-8082-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false, version : 1.2.8, lastPacketReceivedIdleMillis : 86178
-2022-07-25 22:35:00.473 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
-2022-07-25 22:35:00.491 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
-2022-07-25 22:35:00.524 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
-2022-07-25 22:35:00.539 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
-2022-07-25 22:35:00.645  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.config.ChainedDynamicProperty  : Flipping property: account-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2022-07-25 22:35:00.658  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.loadbalancer.BaseLoadBalancer  : Client: account-service instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=account-service,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2022-07-25 22:35:00.663  INFO 2668 --- [http-nio-8082-exec-3] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
-2022-07-25 22:35:00.685  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.config.ChainedDynamicProperty  : Flipping property: account-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2022-07-25 22:35:00.686  INFO 2668 --- [http-nio-8082-exec-3] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client account-service initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=account-service,current list of Servers=[192.168.202.1:8083],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
-},Server stats: [[Server:192.168.202.1:8083;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@51cde400
-2022-07-25 22:35:00.941 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (401ms)
-2022-07-25 22:35:00.943 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
-2022-07-25 22:35:00.963  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.config.ChainedDynamicProperty  : Flipping property: storage-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2022-07-25 22:35:00.964  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.loadbalancer.BaseLoadBalancer  : Client: storage-service instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=storage-service,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2022-07-25 22:35:00.965  INFO 2668 --- [http-nio-8082-exec-3] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
-2022-07-25 22:35:00.972  INFO 2668 --- [http-nio-8082-exec-3] c.netflix.config.ChainedDynamicProperty  : Flipping property: storage-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2022-07-25 22:35:00.973  INFO 2668 --- [http-nio-8082-exec-3] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client storage-service initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=storage-service,current list of Servers=[192.168.202.1:8081],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
-},Server stats: [[Server:192.168.202.1:8081;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@3a05dd27
-2022-07-25 22:35:01.105 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (162ms)
-2022-07-25 22:35:01.679  INFO 2668 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: account-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2022-07-25 22:35:01.979  INFO 2668 --- [PollingServerListUpdater-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: storage-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2022-07-25 22:35:19.324 DEBUG 2668 --- [http-nio-8082-exec-2] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
-2022-07-25 22:35:19.325 DEBUG 2668 --- [http-nio-8082-exec-2] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
-2022-07-25 22:35:19.326 DEBUG 2668 --- [http-nio-8082-exec-2] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
-2022-07-25 22:35:19.326 DEBUG 2668 --- [http-nio-8082-exec-2] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
-2022-07-25 22:35:19.334 DEBUG 2668 --- [http-nio-8082-exec-2] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (7ms)
-2022-07-25 22:35:19.335 DEBUG 2668 --- [http-nio-8082-exec-2] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
-2022-07-25 22:35:19.349 DEBUG 2668 --- [http-nio-8082-exec-2] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (14ms)
-2022-07-25 22:35:24.328 DEBUG 2668 --- [http-nio-8082-exec-9] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
-2022-07-25 22:35:24.328 DEBUG 2668 --- [http-nio-8082-exec-9] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
-2022-07-25 22:35:24.329 DEBUG 2668 --- [http-nio-8082-exec-9] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
-2022-07-25 22:35:24.330 DEBUG 2668 --- [http-nio-8082-exec-9] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
-2022-07-25 22:35:24.342 DEBUG 2668 --- [http-nio-8082-exec-9] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (11ms)
-2022-07-25 22:35:24.342 DEBUG 2668 --- [http-nio-8082-exec-9] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
-2022-07-25 22:35:24.355 DEBUG 2668 --- [http-nio-8082-exec-9] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (12ms)
-2022-07-25 22:35:24.698 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
-2022-07-25 22:35:24.699 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
-2022-07-25 22:35:24.700 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
-2022-07-25 22:35:24.700 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
-2022-07-25 22:35:24.705 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (5ms)
-2022-07-25 22:35:24.706 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
-2022-07-25 22:35:24.710 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (3ms)
-2022-07-25 22:35:25.129 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
-2022-07-25 22:35:25.129 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
-2022-07-25 22:35:25.130 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
-2022-07-25 22:35:25.131 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
-2022-07-25 22:35:25.136 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (5ms)
-2022-07-25 22:35:25.137 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
-2022-07-25 22:35:25.142 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (4ms)
-2022-07-25 22:35:25.618 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
-2022-07-25 22:35:25.619 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
-2022-07-25 22:35:25.620 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
-2022-07-25 22:35:25.620 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
-2022-07-25 22:35:25.626 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (5ms)
-2022-07-25 22:35:25.627 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
-2022-07-25 22:35:25.635 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (8ms)
-2022-07-25 22:35:26.111 DEBUG 2668 --- [http-nio-8082-exec-4] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
-2022-07-25 22:35:26.112 DEBUG 2668 --- [http-nio-8082-exec-4] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
-2022-07-25 22:35:26.113 DEBUG 2668 --- [http-nio-8082-exec-4] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
-2022-07-25 22:35:26.114 DEBUG 2668 --- [http-nio-8082-exec-4] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
-2022-07-25 22:35:26.120 DEBUG 2668 --- [http-nio-8082-exec-4] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (6ms)
-2022-07-25 22:35:26.121 DEBUG 2668 --- [http-nio-8082-exec-4] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
-2022-07-25 22:35:26.126 DEBUG 2668 --- [http-nio-8082-exec-4] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (5ms)
-2022-07-25 22:35:33.438 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
-2022-07-25 22:35:33.439 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 100202003032041(String), 0(Integer), 0(Integer)
-2022-07-25 22:35:33.440 DEBUG 2668 --- [http-nio-8082-exec-3] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
-2022-07-25 22:35:33.441 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
-2022-07-25 22:35:33.455 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (14ms)
-2022-07-25 22:35:33.455 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
-2022-07-25 22:35:33.470 DEBUG 2668 --- [http-nio-8082-exec-3] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (14ms)
-2022-07-25 22:35:51.209 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
-2022-07-25 22:35:51.210 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : ==> Parameters: user2021030320420123(String), 100202003032041(String), 0(Integer), 0(Integer)
-2022-07-25 22:35:51.211 DEBUG 2668 --- [http-nio-8082-exec-1] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
-2022-07-25 22:35:51.211 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user2021030320420123/0 HTTP/1.1
-2022-07-25 22:35:51.231 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (19ms)
-2022-07-25 22:35:51.231 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/100202003032041/0 HTTP/1.1
-2022-07-25 22:35:51.245 DEBUG 2668 --- [http-nio-8082-exec-1] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (13ms)
-2022-07-25 22:36:08.827 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : ==>  Preparing: INSERT INTO order_tbl ( user_id, commodity_code, count, money ) VALUES ( ?, ?, ?, ? )
-2022-07-25 22:36:08.828 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : ==> Parameters: user202103032042012(String), 1002020030320412(String), 0(Integer), 0(Integer)
-2022-07-25 22:36:08.829 DEBUG 2668 --- [http-nio-8082-exec-10] m.o.mapper.OrderMapper.insert            : <==    Updates: 1
-2022-07-25 22:36:08.830 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] ---> PUT http://account-service/account/user202103032042012/0 HTTP/1.1
-2022-07-25 22:36:08.848 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.AccountFeignClient  : [AccountFeignClient#deduct] <--- HTTP/1.1 204  (18ms)
-2022-07-25 22:36:08.849 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] ---> PUT http://storage-service/storage/1002020030320412/0 HTTP/1.1
-2022-07-25 22:36:08.863 DEBUG 2668 --- [http-nio-8082-exec-10] m.orderservice.feign.StorageFeignClient  : [StorageFeignClient#deduct] <--- HTTP/1.1 204  (14ms)
-2022-07-25 22:37:10.484  INFO 2668 --- [Thread-56] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
-2022-07-25 22:37:10.484  WARN 2668 --- [Thread-21] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2022-07-25 22:37:10.484  WARN 2668 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-07-25 22:37:10.484  WARN 2668 --- [Thread-21] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2022-07-25 22:37:10.485  WARN 2668 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2022-07-25 22:37:10.724  INFO 2668 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-25 22:37:10.725  INFO 2668 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2022-07-25 22:37:10.727  INFO 2668 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2022-07-25 22:37:16.790  WARN 2668 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
-2022-07-25 22:37:16.790  INFO 2668 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-07-25 22:37:16.792  INFO 2668 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-07-25 22:37:16.793  INFO 2668 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]) will closed
-2022-07-25 22:37:16.801  INFO 2668 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xbe67aaaf, L:/172.17.144.1:61123 ! R:/172.17.144.1:8091]) will closed
-2022-07-25 22:37:16.802  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.802  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.802  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.802  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.802  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]) will closed
-2022-07-25 22:37:16.803  INFO 2668 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x1c7b762c, L:/172.17.144.1:60839 ! R:/172.17.144.1:8091]) will closed
+2022-07-26 12:49:13.412  INFO 15864 --- [main] m.orderservice.OrderServiceApplication   : No active profile set, falling back to default profiles: default
+2022-07-26 12:49:13.955  INFO 15864 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=49e36265-0346-35d4-84fb-39196acbeec2
+2022-07-26 12:49:13.965  INFO 15864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:13.986  INFO 15864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:13.990  INFO 15864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:13.992  INFO 15864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:13.993  INFO 15864 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+2022-07-26 12:49:13.996  INFO 15864 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
+2022-07-26 12:49:14.028  INFO 15864 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-07-26 12:49:14.031  INFO 15864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:14.036  INFO 15864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:14.258  INFO 15864 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+2022-07-26 12:49:14.360  INFO 15864 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-26 12:49:14.360  INFO 15864 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[order-service] txServiceGroup[seata-tx-service-group]
+2022-07-26 12:49:14.369  INFO 15864 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+2022-07-26 12:49:14.369  INFO 15864 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+2022-07-26 12:49:14.373  INFO 15864 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-26 12:49:14.374  INFO 15864 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[order-service] txServiceGroup[seata-tx-service-group]
+2022-07-26 12:49:14.374  INFO 15864 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+2022-07-26 12:49:14.375  INFO 15864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:14.427  INFO 15864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:14.429  INFO 15864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:14.583  INFO 15864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-07-26 12:49:14.590  INFO 15864 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-26 12:49:14.590  INFO 15864 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-26 12:49:14.702  INFO 15864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-26 12:49:14.702  INFO 15864 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1272 ms
+2022-07-26 12:49:15.045  INFO 15864 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-26 12:49:15.139  INFO 15864 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-26 12:49:15.150  INFO 15864 --- [main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy of [dataSource]
+2022-07-26 12:49:15.399  INFO 15864 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
+2022-07-26 12:49:15.399  INFO 15864 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://localhost:3306/seata_demo
+2022-07-26 12:49:15.401  INFO 15864 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:172.17.144.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://localhost:3306/seata_demo', applicationId='order-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-26 12:49:15.525  INFO 15864 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.4.2, server version:1.4.2,channel:[id: 0x7faf6c8c, L:/172.17.144.1:49591 - R:/172.17.144.1:8091]
+2022-07-26 12:49:15.533  INFO 15864 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 45 ms, version:1.4.2,role:RMROLE,channel:[id: 0x7faf6c8c, L:/172.17.144.1:49591 - R:/172.17.144.1:8091]
+2022-07-26 12:49:15.832  WARN 15864 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-26 12:49:15.832  INFO 15864 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-26 12:49:15.834  WARN 15864 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-26 12:49:15.835  INFO 15864 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-26 12:49:15.916  INFO 15864 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-26 12:49:15.974  INFO 15864 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-07-26 12:49:16.109  INFO 15864 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-26 12:49:16.394  INFO 15864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-07-26 12:49:16.402  INFO 15864 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP order-service 192.168.202.1:8082 register finished
+2022-07-26 12:49:16.509  INFO 15864 --- [main] m.orderservice.OrderServiceApplication   : Started OrderServiceApplication in 3.856 seconds (JVM running for 4.427)
+2022-07-26 12:49:33.351  INFO 15864 --- [rpcDispatch_RMROLE_1_1_32] i.s.c.r.p.client.RmUndoLogProcessor      : rm handle undo log process:UndoLogDeleteRequest{resourceId='jdbc:mysql://localhost:3306/seata_demo', saveDays=7, branchType=AT}
+2022-07-26 12:49:33.351  WARN 15864 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.RMHandlerAT                  : Failed to get dataSourceProxy for delete undolog on jdbc:mysql://localhost:3306/seata_demo
+2022-07-26 12:50:14.366  INFO 15864 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
+2022-07-26 12:50:14.367  INFO 15864 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:172.17.144.1:8091,msg:< RegisterTMRequest{applicationId='order-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-26 12:50:14.375  INFO 15864 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.4.2, server version:1.4.2,channel:[id: 0x3f6d48da, L:/172.17.144.1:49852 - R:/172.17.144.1:8091]
+2022-07-26 12:50:14.375  INFO 15864 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 6 ms, version:1.4.2,role:TMROLE,channel:[id: 0x3f6d48da, L:/172.17.144.1:49852 - R:/172.17.144.1:8091]

@@ -13,10 +13,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="account-service" target="8" />
-      <module name="order-service" target="8" />
-      <module name="spring_cloud_distributed_transaction_seata" target="8" />
-      <module name="storage-service" target="8" />
+      <module name="account-service" target="11" />
+      <module name="order-service" target="11" />
+      <module name="spring_cloud_distributed_transaction_seata" target="11" />
+      <module name="storage-service" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

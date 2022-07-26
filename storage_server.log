@@ -1,123 +1,46 @@
-2022-07-25 22:33:28.611  INFO 2760 --- [main] m.s.StorageServiceApplication            : No active profile set, falling back to default profiles: default
-2022-07-25 22:33:29.300  INFO 2760 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=915700d7-6bb2-3380-b35c-2d5799dffea2
-2022-07-25 22:33:29.312  INFO 2760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:29.338  INFO 2760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:29.343  INFO 2760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:29.345  INFO 2760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:29.346  INFO 2760 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
-2022-07-25 22:33:29.349  INFO 2760 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
-2022-07-25 22:33:29.393  INFO 2760 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
-2022-07-25 22:33:29.397  INFO 2760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:29.403  INFO 2760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:29.686  INFO 2760 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
-2022-07-25 22:33:29.773  INFO 2760 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-2022-07-25 22:33:29.773  INFO 2760 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[storage-service] txServiceGroup[seata-tx-service-group]
-2022-07-25 22:33:29.783  INFO 2760 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
-2022-07-25 22:33:29.784  INFO 2760 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
-2022-07-25 22:33:29.789  INFO 2760 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-2022-07-25 22:33:29.789  INFO 2760 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[storage-service] txServiceGroup[seata-tx-service-group]
-2022-07-25 22:33:29.789  INFO 2760 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
-2022-07-25 22:33:29.791  INFO 2760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-25 22:33:30.045  INFO 2760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2022-07-25 22:33:30.053  INFO 2760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-25 22:33:30.054  INFO 2760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2022-07-25 22:33:30.229  INFO 2760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-25 22:33:30.229  INFO 2760 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1600 ms
-2022-07-25 22:33:30.302  INFO 2760 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2022-07-25 22:33:30.408  INFO 2760 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-07-25 22:33:30.419  INFO 2760 --- [main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy of [dataSource]
-2022-07-25 22:33:30.700  INFO 2760 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
-2022-07-25 22:33:30.700  INFO 2760 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://localhost:3306/seata_demo
-2022-07-25 22:33:30.703  INFO 2760 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:172.17.144.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://localhost:3306/seata_demo', applicationId='storage-service', transactionServiceGroup='seata-tx-service-group'} >
-2022-07-25 22:33:31.213  INFO 2760 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.4.2, server version:1.4.2,channel:[id: 0x1ad1de3b, L:/172.17.144.1:60807 - R:/172.17.144.1:8091]
-2022-07-25 22:33:31.221  INFO 2760 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 57 ms, version:1.4.2,role:RMROLE,channel:[id: 0x1ad1de3b, L:/172.17.144.1:60807 - R:/172.17.144.1:8091]
-2022-07-25 22:33:32.100  WARN 2760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-25 22:33:32.100  INFO 2760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-25 22:33:32.104  WARN 2760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-25 22:33:32.104  INFO 2760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-25 22:33:32.225  INFO 2760 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-25 22:33:32.575  INFO 2760 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-25 22:33:33.086  INFO 2760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2022-07-25 22:33:33.093  INFO 2760 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP storage-service 192.168.202.1:8081 register finished
-2022-07-25 22:33:33.364  INFO 2760 --- [main] m.s.StorageServiceApplication            : Started StorageServiceApplication in 5.981 seconds (JVM running for 6.764)
-2022-07-25 22:34:29.769  INFO 2760 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
-2022-07-25 22:34:29.770  INFO 2760 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:172.17.144.1:8091,msg:< RegisterTMRequest{applicationId='storage-service', transactionServiceGroup='seata-tx-service-group'} >
-2022-07-25 22:34:29.778  INFO 2760 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.4.2, server version:1.4.2,channel:[id: 0xb6de6581, L:/172.17.144.1:61094 - R:/172.17.144.1:8091]
-2022-07-25 22:34:29.778  INFO 2760 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 5 ms, version:1.4.2,role:TMROLE,channel:[id: 0xb6de6581, L:/172.17.144.1:61094 - R:/172.17.144.1:8091]
-2022-07-25 22:35:00.999  INFO 2760 --- [http-nio-8081-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-25 22:35:00.999  INFO 2760 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-25 22:35:01.005  INFO 2760 --- [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2022-07-25 22:35:01.039  WARN 2760 --- [http-nio-8081-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false, version : 1.2.8, lastPacketReceivedIdleMillis : 90486
-2022-07-25 22:35:01.048  INFO 2760 --- [http-nio-8081-exec-8] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
-2022-07-25 22:35:01.062 DEBUG 2760 --- [http-nio-8081-exec-8] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
-2022-07-25 22:35:01.079 DEBUG 2760 --- [http-nio-8081-exec-8] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 0(Integer), 100202003032041(String)
-2022-07-25 22:35:01.090 DEBUG 2760 --- [http-nio-8081-exec-8] m.s.mapper.StorageMapper.deduct          : <==    Updates: 1
-2022-07-25 22:35:01.090  INFO 2760 --- [http-nio-8081-exec-8] m.s.service.impl.StorageServiceImpl      : 扣减库存成功
-2022-07-25 22:35:19.346  INFO 2760 --- [http-nio-8081-exec-5] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
-2022-07-25 22:35:19.346 DEBUG 2760 --- [http-nio-8081-exec-5] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
-2022-07-25 22:35:19.346 DEBUG 2760 --- [http-nio-8081-exec-5] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 0(Integer), 100202003032041(String)
-2022-07-25 22:35:19.347 DEBUG 2760 --- [http-nio-8081-exec-5] m.s.mapper.StorageMapper.deduct          : <==    Updates: 1
-2022-07-25 22:35:19.347  INFO 2760 --- [http-nio-8081-exec-5] m.s.service.impl.StorageServiceImpl      : 扣减库存成功
-2022-07-25 22:35:24.352  INFO 2760 --- [http-nio-8081-exec-6] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
-2022-07-25 22:35:24.353 DEBUG 2760 --- [http-nio-8081-exec-6] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
-2022-07-25 22:35:24.353 DEBUG 2760 --- [http-nio-8081-exec-6] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 0(Integer), 100202003032041(String)
-2022-07-25 22:35:24.353 DEBUG 2760 --- [http-nio-8081-exec-6] m.s.mapper.StorageMapper.deduct          : <==    Updates: 1
-2022-07-25 22:35:24.354  INFO 2760 --- [http-nio-8081-exec-6] m.s.service.impl.StorageServiceImpl      : 扣减库存成功
-2022-07-25 22:35:24.708  INFO 2760 --- [http-nio-8081-exec-9] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
-2022-07-25 22:35:24.708 DEBUG 2760 --- [http-nio-8081-exec-9] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
-2022-07-25 22:35:24.708 DEBUG 2760 --- [http-nio-8081-exec-9] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 0(Integer), 100202003032041(String)
-2022-07-25 22:35:24.709 DEBUG 2760 --- [http-nio-8081-exec-9] m.s.mapper.StorageMapper.deduct          : <==    Updates: 1
-2022-07-25 22:35:24.709  INFO 2760 --- [http-nio-8081-exec-9] m.s.service.impl.StorageServiceImpl      : 扣减库存成功
-2022-07-25 22:35:25.139  INFO 2760 --- [http-nio-8081-exec-10] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
-2022-07-25 22:35:25.139 DEBUG 2760 --- [http-nio-8081-exec-10] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
-2022-07-25 22:35:25.139 DEBUG 2760 --- [http-nio-8081-exec-10] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 0(Integer), 100202003032041(String)
-2022-07-25 22:35:25.140 DEBUG 2760 --- [http-nio-8081-exec-10] m.s.mapper.StorageMapper.deduct          : <==    Updates: 1
-2022-07-25 22:35:25.140  INFO 2760 --- [http-nio-8081-exec-10] m.s.service.impl.StorageServiceImpl      : 扣减库存成功
-2022-07-25 22:35:25.630  INFO 2760 --- [http-nio-8081-exec-2] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
-2022-07-25 22:35:25.630 DEBUG 2760 --- [http-nio-8081-exec-2] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
-2022-07-25 22:35:25.630 DEBUG 2760 --- [http-nio-8081-exec-2] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 0(Integer), 100202003032041(String)
-2022-07-25 22:35:25.631 DEBUG 2760 --- [http-nio-8081-exec-2] m.s.mapper.StorageMapper.deduct          : <==    Updates: 1
-2022-07-25 22:35:25.632  INFO 2760 --- [http-nio-8081-exec-2] m.s.service.impl.StorageServiceImpl      : 扣减库存成功
-2022-07-25 22:35:26.123  INFO 2760 --- [http-nio-8081-exec-4] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
-2022-07-25 22:35:26.123 DEBUG 2760 --- [http-nio-8081-exec-4] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
-2022-07-25 22:35:26.123 DEBUG 2760 --- [http-nio-8081-exec-4] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 0(Integer), 100202003032041(String)
-2022-07-25 22:35:26.124 DEBUG 2760 --- [http-nio-8081-exec-4] m.s.mapper.StorageMapper.deduct          : <==    Updates: 1
-2022-07-25 22:35:26.124  INFO 2760 --- [http-nio-8081-exec-4] m.s.service.impl.StorageServiceImpl      : 扣减库存成功
-2022-07-25 22:35:33.467  INFO 2760 --- [http-nio-8081-exec-9] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
-2022-07-25 22:35:33.467 DEBUG 2760 --- [http-nio-8081-exec-9] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
-2022-07-25 22:35:33.468 DEBUG 2760 --- [http-nio-8081-exec-9] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 0(Integer), 100202003032041(String)
-2022-07-25 22:35:33.468 DEBUG 2760 --- [http-nio-8081-exec-9] m.s.mapper.StorageMapper.deduct          : <==    Updates: 1
-2022-07-25 22:35:33.468  INFO 2760 --- [http-nio-8081-exec-9] m.s.service.impl.StorageServiceImpl      : 扣减库存成功
-2022-07-25 22:35:51.242  INFO 2760 --- [http-nio-8081-exec-6] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
-2022-07-25 22:35:51.243 DEBUG 2760 --- [http-nio-8081-exec-6] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
-2022-07-25 22:35:51.243 DEBUG 2760 --- [http-nio-8081-exec-6] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 0(Integer), 100202003032041(String)
-2022-07-25 22:35:51.243 DEBUG 2760 --- [http-nio-8081-exec-6] m.s.mapper.StorageMapper.deduct          : <==    Updates: 1
-2022-07-25 22:35:51.243  INFO 2760 --- [http-nio-8081-exec-6] m.s.service.impl.StorageServiceImpl      : 扣减库存成功
-2022-07-25 22:36:08.861  INFO 2760 --- [http-nio-8081-exec-1] m.s.service.impl.StorageServiceImpl      : 开始扣减库存
-2022-07-25 22:36:08.861 DEBUG 2760 --- [http-nio-8081-exec-1] m.s.mapper.StorageMapper.deduct          : ==>  Preparing: update storage_tbl set `count` = `count` - ? where commodity_code = ?
-2022-07-25 22:36:08.862 DEBUG 2760 --- [http-nio-8081-exec-1] m.s.mapper.StorageMapper.deduct          : ==> Parameters: 0(Integer), 1002020030320412(String)
-2022-07-25 22:36:08.862 DEBUG 2760 --- [http-nio-8081-exec-1] m.s.mapper.StorageMapper.deduct          : <==    Updates: 0
-2022-07-25 22:36:08.862  INFO 2760 --- [http-nio-8081-exec-1] m.s.service.impl.StorageServiceImpl      : 扣减库存成功
-2022-07-25 22:37:10.516  WARN 2760 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-07-25 22:37:10.517  WARN 2760 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2022-07-25 22:37:10.517  WARN 2760 --- [Thread-19] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2022-07-25 22:37:10.517  WARN 2760 --- [Thread-6] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2022-07-25 22:37:10.749  INFO 2760 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-25 22:37:10.751  INFO 2760 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2022-07-25 22:37:10.753  INFO 2760 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2022-07-25 22:37:16.806  WARN 2760 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
-2022-07-25 22:37:16.807  INFO 2760 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-07-25 22:37:16.812  INFO 2760 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-07-25 22:37:16.815  INFO 2760 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2022-07-25 22:37:16.817  INFO 2760 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0xb6de6581, L:/172.17.144.1:61094 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.817  INFO 2760 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0xb6de6581, L:/172.17.144.1:61094 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.818  INFO 2760 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0xb6de6581, L:/172.17.144.1:61094 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.818  INFO 2760 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0xb6de6581, L:/172.17.144.1:61094 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.818  INFO 2760 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xb6de6581, L:/172.17.144.1:61094 ! R:/172.17.144.1:8091]) will closed
-2022-07-25 22:37:16.818  INFO 2760 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xb6de6581, L:/172.17.144.1:61094 ! R:/172.17.144.1:8091]) will closed
-2022-07-25 22:37:16.819  INFO 2760 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x1ad1de3b, L:/172.17.144.1:60807 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.819  INFO 2760 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x1ad1de3b, L:/172.17.144.1:60807 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.819  INFO 2760 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x1ad1de3b, L:/172.17.144.1:60807 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.819  INFO 2760 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x1ad1de3b, L:/172.17.144.1:60807 ! R:/172.17.144.1:8091]
-2022-07-25 22:37:16.819  INFO 2760 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x1ad1de3b, L:/172.17.144.1:60807 ! R:/172.17.144.1:8091]) will closed
-2022-07-25 22:37:16.819  INFO 2760 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x1ad1de3b, L:/172.17.144.1:60807 ! R:/172.17.144.1:8091]) will closed
+2022-07-26 12:49:25.068  INFO 11916 --- [main] m.s.StorageServiceApplication            : No active profile set, falling back to default profiles: default
+2022-07-26 12:49:25.567  INFO 11916 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=915700d7-6bb2-3380-b35c-2d5799dffea2
+2022-07-26 12:49:25.577  INFO 11916 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:25.600  INFO 11916 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:25.604  INFO 11916 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:25.606  INFO 11916 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:25.607  INFO 11916 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+2022-07-26 12:49:25.610  INFO 11916 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
+2022-07-26 12:49:25.642  INFO 11916 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-07-26 12:49:25.645  INFO 11916 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:25.650  INFO 11916 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:25.872  INFO 11916 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+2022-07-26 12:49:25.963  INFO 11916 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-26 12:49:25.963  INFO 11916 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[storage-service] txServiceGroup[seata-tx-service-group]
+2022-07-26 12:49:25.971  INFO 11916 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+2022-07-26 12:49:25.972  INFO 11916 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+2022-07-26 12:49:25.976  INFO 11916 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-26 12:49:25.976  INFO 11916 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[storage-service] txServiceGroup[seata-tx-service-group]
+2022-07-26 12:49:25.976  INFO 11916 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+2022-07-26 12:49:25.985  INFO 11916 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-26 12:49:26.196  INFO 11916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-26 12:49:26.203  INFO 11916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-26 12:49:26.203  INFO 11916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-26 12:49:26.310  INFO 11916 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-26 12:49:26.311  INFO 11916 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1212 ms
+2022-07-26 12:49:26.373  INFO 11916 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-26 12:49:26.460  INFO 11916 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-26 12:49:26.470  INFO 11916 --- [main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy of [dataSource]
+2022-07-26 12:49:26.716  INFO 11916 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
+2022-07-26 12:49:26.716  INFO 11916 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://localhost:3306/seata_demo
+2022-07-26 12:49:26.718  INFO 11916 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:172.17.144.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://localhost:3306/seata_demo', applicationId='storage-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-26 12:49:26.830  INFO 11916 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.4.2, server version:1.4.2,channel:[id: 0x451ac940, L:/172.17.144.1:49629 - R:/172.17.144.1:8091]
+2022-07-26 12:49:26.836  INFO 11916 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 41 ms, version:1.4.2,role:RMROLE,channel:[id: 0x451ac940, L:/172.17.144.1:49629 - R:/172.17.144.1:8091]
+2022-07-26 12:49:27.131  WARN 11916 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-26 12:49:27.131  INFO 11916 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-26 12:49:27.134  WARN 11916 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-26 12:49:27.134  INFO 11916 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-26 12:49:27.233  INFO 11916 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-26 12:49:27.409  INFO 11916 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-26 12:49:27.725  INFO 11916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-26 12:49:27.731  INFO 11916 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP storage-service 192.168.202.1:8081 register finished
+2022-07-26 12:49:27.835  INFO 11916 --- [main] m.s.StorageServiceApplication            : Started StorageServiceApplication in 3.579 seconds (JVM running for 4.137)
+2022-07-26 12:50:25.958  INFO 11916 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.17.144.1:8091
+2022-07-26 12:50:25.960  INFO 11916 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:172.17.144.1:8091,msg:< RegisterTMRequest{applicationId='storage-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-26 12:50:25.968  INFO 11916 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.4.2, server version:1.4.2,channel:[id: 0xb5a13657, L:/172.17.144.1:50165 - R:/172.17.144.1:8091]
+2022-07-26 12:50:25.968  INFO 11916 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 6 ms, version:1.4.2,role:TMROLE,channel:[id: 0xb5a13657, L:/172.17.144.1:50165 - R:/172.17.144.1:8091]
