@@ -104,4 +104,4 @@ seata:
       password: 123456
       group: SEATA_GROUP
 
-  data-source-proxy-mode: XA
+  data-source-proxy-mode: AT
