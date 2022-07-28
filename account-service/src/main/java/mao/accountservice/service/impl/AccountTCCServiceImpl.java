@@ -144,7 +144,7 @@ public class AccountTCCServiceImpl implements AccountTCCService
         int update = accountFreezeMapper.updateById(accountFreeze);
         //恢复可用余额
         log.debug("开始恢复可用余额");
-        accountMapper.refund(accountFreeze.getUserId(), accountFreeze.getFreezeMoney());
+        accountMapper.refund(accountFreeze.getUserId(), (Integer) context.getActionContext("money"));
         return update == 1;
     }
 }

@@ -1,260 +1,237 @@
-2022-07-27 13:20:33.669  INFO 13216 --- [main] m.a.AccountServiceApplication            : No active profile set, falling back to default profiles: default
-2022-07-27 13:20:34.435  INFO 13216 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=bc328c64-c76a-38e8-af4b-94347371b21e
-2022-07-27 13:20:34.448  INFO 13216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-27 13:20:34.487  INFO 13216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-27 13:20:34.493  INFO 13216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-27 13:20:34.496  INFO 13216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-27 13:20:34.497  INFO 13216 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
-2022-07-27 13:20:34.501  INFO 13216 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
-2022-07-27 13:20:34.543  INFO 13216 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
-2022-07-27 13:20:34.546  INFO 13216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-27 13:20:34.553  INFO 13216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-27 13:20:34.844  INFO 13216 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
-2022-07-27 13:20:34.987  INFO 13216 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-2022-07-27 13:20:34.988  INFO 13216 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[account-service] txServiceGroup[seata-tx-service-group]
-2022-07-27 13:20:35.002  INFO 13216 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
-2022-07-27 13:20:35.003  INFO 13216 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
-2022-07-27 13:20:35.008  INFO 13216 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
-2022-07-27 13:20:35.008  INFO 13216 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[account-service] txServiceGroup[seata-tx-service-group]
-2022-07-27 13:20:35.008  INFO 13216 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
-2022-07-27 13:20:35.010  INFO 13216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-07-27 13:20:35.296  INFO 13216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
-2022-07-27 13:20:35.306  INFO 13216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-27 13:20:35.306  INFO 13216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2022-07-27 13:20:35.455  INFO 13216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-27 13:20:35.456  INFO 13216 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1763 ms
-2022-07-27 13:20:35.529  INFO 13216 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2022-07-27 13:20:35.638  INFO 13216 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-07-27 13:20:35.649  INFO 13216 --- [main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy of [dataSource]
-2022-07-27 13:20:35.998  INFO 13216 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.31.160.1:8091
-2022-07-27 13:20:35.998  INFO 13216 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://localhost:3306/seata_demo
-2022-07-27 13:20:36.000  INFO 13216 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:172.31.160.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://localhost:3306/seata_demo', applicationId='account-service', transactionServiceGroup='seata-tx-service-group'} >
-2022-07-27 13:20:36.310  INFO 13216 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.4.2, server version:1.4.2,channel:[id: 0x3a545958, L:/172.31.160.1:50118 - R:/172.31.160.1:8091]
-2022-07-27 13:20:36.316  INFO 13216 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 192 ms, version:1.4.2,role:RMROLE,channel:[id: 0x3a545958, L:/172.31.160.1:50118 - R:/172.31.160.1:8091]
-2022-07-27 13:20:36.698  WARN 13216 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-27 13:20:36.698  INFO 13216 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-27 13:20:36.701  WARN 13216 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-07-27 13:20:36.702  INFO 13216 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-07-27 13:20:36.822  INFO 13216 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-27 13:20:37.071  INFO 13216 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-27 13:20:37.483  INFO 13216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
-2022-07-27 13:20:37.500  INFO 13216 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP account-service 192.168.202.1:8083 register finished
-2022-07-27 13:20:37.625  INFO 13216 --- [main] m.a.AccountServiceApplication            : Started AccountServiceApplication in 4.86 seconds (JVM running for 8.498)
-2022-07-27 13:21:34.979  INFO 13216 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.31.160.1:8091
-2022-07-27 13:21:34.980  INFO 13216 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:172.31.160.1:8091,msg:< RegisterTMRequest{applicationId='account-service', transactionServiceGroup='seata-tx-service-group'} >
-2022-07-27 13:21:34.991  INFO 13216 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.4.2, server version:1.4.2,channel:[id: 0x7ae5eec0, L:/172.31.160.1:50361 - R:/172.31.160.1:8091]
-2022-07-27 13:21:34.991  INFO 13216 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 9 ms, version:1.4.2,role:TMROLE,channel:[id: 0x7ae5eec0, L:/172.31.160.1:50361 - R:/172.31.160.1:8091]
-2022-07-27 13:33:40.435  INFO 13216 --- [http-nio-8083-exec-9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-27 13:33:40.436  INFO 13216 --- [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-27 13:33:40.440  INFO 13216 --- [http-nio-8083-exec-9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2022-07-27 13:33:40.470  WARN 13216 --- [http-nio-8083-exec-9] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false, version : 1.2.8, lastPacketReceivedIdleMillis : 784678
-2022-07-27 13:33:40.484  INFO 13216 --- [http-nio-8083-exec-9] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:33:40.503 DEBUG 13216 --- [http-nio-8083-exec-9] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 10 where user_id = ?
-2022-07-27 13:33:40.550 DEBUG 13216 --- [http-nio-8083-exec-9] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:33:40.623 DEBUG 13216 --- [http-nio-8083-exec-9] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:33:40.623  INFO 13216 --- [http-nio-8083-exec-9] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:33:41.056  INFO 13216 --- [rpcDispatch_RMROLE_1_1_32] i.s.c.r.p.c.RmBranchRollbackProcessor    : rm handle branch rollback process:xid=172.31.160.1:8091:8683228701762637825,branchId=8683228701762637829,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:33:41.057  INFO 13216 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch Rollbacking: 172.31.160.1:8091:8683228701762637825 8683228701762637829 jdbc:mysql://localhost:3306/seata_demo
-2022-07-27 13:33:41.084  INFO 13216 --- [rpcDispatch_RMROLE_1_1_32] i.s.r.d.undo.AbstractUndoLogManager      : xid 172.31.160.1:8091:8683228701762637825 branch 8683228701762637829, undo_log deleted with GlobalFinished
-2022-07-27 13:33:41.085  INFO 13216 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch Rollbacked result: PhaseTwo_Rollbacked
-2022-07-27 13:43:37.478  WARN 13216 --- [http-nio-8083-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false, version : 1.2.8, lastPacketReceivedIdleMillis : 596394
-2022-07-27 13:43:37.481  INFO 13216 --- [http-nio-8083-exec-3] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:43:37.482 DEBUG 13216 --- [http-nio-8083-exec-3] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 10 where user_id = ?
-2022-07-27 13:43:37.482 DEBUG 13216 --- [http-nio-8083-exec-3] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:43:37.484 DEBUG 13216 --- [http-nio-8083-exec-3] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:43:37.484  INFO 13216 --- [http-nio-8083-exec-3] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:43:37.688  INFO 13216 --- [rpcDispatch_RMROLE_1_2_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637833,branchId=8683228701762637837,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:43:37.688  INFO 13216 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637833 8683228701762637837 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:43:37.689  INFO 13216 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:14.532  WARN 13216 --- [http-nio-8083-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false, version : 1.2.8, lastPacketReceivedIdleMillis : 276515
-2022-07-27 13:48:14.536  INFO 13216 --- [http-nio-8083-exec-10] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:14.536 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:14.536 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:14.539 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:14.539  INFO 13216 --- [http-nio-8083-exec-10] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:14.679  INFO 13216 --- [rpcDispatch_RMROLE_1_3_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637843,branchId=8683228701762637847,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:14.679  INFO 13216 --- [rpcDispatch_RMROLE_1_3_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637843 8683228701762637847 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:14.679  INFO 13216 --- [rpcDispatch_RMROLE_1_3_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:15.762  INFO 13216 --- [http-nio-8083-exec-2] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:15.763 DEBUG 13216 --- [http-nio-8083-exec-2] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:15.763 DEBUG 13216 --- [http-nio-8083-exec-2] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:15.765 DEBUG 13216 --- [http-nio-8083-exec-2] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:15.765  INFO 13216 --- [http-nio-8083-exec-2] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:16.408  INFO 13216 --- [http-nio-8083-exec-4] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:16.408 DEBUG 13216 --- [http-nio-8083-exec-4] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:16.409 DEBUG 13216 --- [http-nio-8083-exec-4] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:16.410 DEBUG 13216 --- [http-nio-8083-exec-4] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:16.411  INFO 13216 --- [http-nio-8083-exec-4] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:16.681  INFO 13216 --- [rpcDispatch_RMROLE_1_4_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637853,branchId=8683228701762637857,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:16.681  INFO 13216 --- [rpcDispatch_RMROLE_1_4_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637853 8683228701762637857 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:16.681  INFO 13216 --- [rpcDispatch_RMROLE_1_4_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:16.696  INFO 13216 --- [rpcDispatch_RMROLE_1_5_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637861,branchId=8683228701762637865,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:16.697  INFO 13216 --- [rpcDispatch_RMROLE_1_5_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637861 8683228701762637865 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:16.697  INFO 13216 --- [rpcDispatch_RMROLE_1_5_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:16.930  INFO 13216 --- [http-nio-8083-exec-6] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:16.930 DEBUG 13216 --- [http-nio-8083-exec-6] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:16.930 DEBUG 13216 --- [http-nio-8083-exec-6] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:16.932 DEBUG 13216 --- [http-nio-8083-exec-6] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:16.932  INFO 13216 --- [http-nio-8083-exec-6] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:17.469  INFO 13216 --- [http-nio-8083-exec-7] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:17.469 DEBUG 13216 --- [http-nio-8083-exec-7] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:17.469 DEBUG 13216 --- [http-nio-8083-exec-7] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:17.471 DEBUG 13216 --- [http-nio-8083-exec-7] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:17.471  INFO 13216 --- [http-nio-8083-exec-7] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:17.687  INFO 13216 --- [rpcDispatch_RMROLE_1_6_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637873,branchId=8683228701762637877,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:17.687  INFO 13216 --- [rpcDispatch_RMROLE_1_6_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637873 8683228701762637877 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:17.687  INFO 13216 --- [rpcDispatch_RMROLE_1_6_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:17.703  INFO 13216 --- [rpcDispatch_RMROLE_1_7_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637881,branchId=8683228701762637885,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:17.703  INFO 13216 --- [rpcDispatch_RMROLE_1_7_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637881 8683228701762637885 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:17.703  INFO 13216 --- [rpcDispatch_RMROLE_1_7_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:17.792  INFO 13216 --- [http-nio-8083-exec-8] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:17.792 DEBUG 13216 --- [http-nio-8083-exec-8] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:17.793 DEBUG 13216 --- [http-nio-8083-exec-8] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:17.794 DEBUG 13216 --- [http-nio-8083-exec-8] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:17.794  INFO 13216 --- [http-nio-8083-exec-8] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:18.031  INFO 13216 --- [http-nio-8083-exec-10] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:18.032 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:18.032 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:18.034 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:18.034  INFO 13216 --- [http-nio-8083-exec-10] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:18.364  INFO 13216 --- [http-nio-8083-exec-1] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:18.364 DEBUG 13216 --- [http-nio-8083-exec-1] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:18.364 DEBUG 13216 --- [http-nio-8083-exec-1] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:18.366 DEBUG 13216 --- [http-nio-8083-exec-1] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:18.366  INFO 13216 --- [http-nio-8083-exec-1] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:18.578  INFO 13216 --- [http-nio-8083-exec-2] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:18.578 DEBUG 13216 --- [http-nio-8083-exec-2] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:18.578 DEBUG 13216 --- [http-nio-8083-exec-2] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:18.580 DEBUG 13216 --- [http-nio-8083-exec-2] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:18.580  INFO 13216 --- [http-nio-8083-exec-2] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:18.689  INFO 13216 --- [rpcDispatch_RMROLE_1_8_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637893,branchId=8683228701762637897,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:18.690  INFO 13216 --- [rpcDispatch_RMROLE_1_8_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637893 8683228701762637897 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:18.690  INFO 13216 --- [rpcDispatch_RMROLE_1_8_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:18.705  INFO 13216 --- [rpcDispatch_RMROLE_1_9_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637901,branchId=8683228701762637905,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:18.705  INFO 13216 --- [rpcDispatch_RMROLE_1_9_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637901 8683228701762637905 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:18.705  INFO 13216 --- [rpcDispatch_RMROLE_1_9_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:18.720  INFO 13216 --- [rpcDispatch_RMROLE_1_10_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637909,branchId=8683228701762637913,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:18.720  INFO 13216 --- [rpcDispatch_RMROLE_1_10_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637909 8683228701762637913 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:18.721  INFO 13216 --- [rpcDispatch_RMROLE_1_10_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:18.738  INFO 13216 --- [rpcDispatch_RMROLE_1_11_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637917,branchId=8683228701762637921,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:18.738  INFO 13216 --- [rpcDispatch_RMROLE_1_11_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637917 8683228701762637921 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:18.738  INFO 13216 --- [rpcDispatch_RMROLE_1_11_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:18.812  INFO 13216 --- [http-nio-8083-exec-3] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:18.813 DEBUG 13216 --- [http-nio-8083-exec-3] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:18.813 DEBUG 13216 --- [http-nio-8083-exec-3] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:18.815 DEBUG 13216 --- [http-nio-8083-exec-3] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:18.815  INFO 13216 --- [http-nio-8083-exec-3] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:19.164  INFO 13216 --- [http-nio-8083-exec-5] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:19.165 DEBUG 13216 --- [http-nio-8083-exec-5] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:19.165 DEBUG 13216 --- [http-nio-8083-exec-5] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:19.167 DEBUG 13216 --- [http-nio-8083-exec-5] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:19.168  INFO 13216 --- [http-nio-8083-exec-5] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:19.489  INFO 13216 --- [http-nio-8083-exec-6] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:19.489 DEBUG 13216 --- [http-nio-8083-exec-6] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:19.489 DEBUG 13216 --- [http-nio-8083-exec-6] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:19.491 DEBUG 13216 --- [http-nio-8083-exec-6] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:19.491  INFO 13216 --- [http-nio-8083-exec-6] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:19.685  INFO 13216 --- [rpcDispatch_RMROLE_1_12_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637933,branchId=8683228701762637937,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:19.685  INFO 13216 --- [rpcDispatch_RMROLE_1_12_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637933 8683228701762637937 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:19.685  INFO 13216 --- [rpcDispatch_RMROLE_1_12_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:19.701  INFO 13216 --- [rpcDispatch_RMROLE_1_13_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637941,branchId=8683228701762637945,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:19.701  INFO 13216 --- [rpcDispatch_RMROLE_1_13_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637941 8683228701762637945 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:19.701  INFO 13216 --- [rpcDispatch_RMROLE_1_13_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:19.715  INFO 13216 --- [rpcDispatch_RMROLE_1_14_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637949,branchId=8683228701762637953,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:19.715  INFO 13216 --- [rpcDispatch_RMROLE_1_14_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637949 8683228701762637953 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:19.715  INFO 13216 --- [rpcDispatch_RMROLE_1_14_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:19.826  INFO 13216 --- [http-nio-8083-exec-7] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:19.827 DEBUG 13216 --- [http-nio-8083-exec-7] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:19.827 DEBUG 13216 --- [http-nio-8083-exec-7] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:19.829 DEBUG 13216 --- [http-nio-8083-exec-7] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:19.829  INFO 13216 --- [http-nio-8083-exec-7] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:20.249  INFO 13216 --- [http-nio-8083-exec-9] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:20.250 DEBUG 13216 --- [http-nio-8083-exec-9] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:20.251 DEBUG 13216 --- [http-nio-8083-exec-9] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:20.252 DEBUG 13216 --- [http-nio-8083-exec-9] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:20.253  INFO 13216 --- [http-nio-8083-exec-9] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:20.592  INFO 13216 --- [http-nio-8083-exec-10] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:20.593 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:20.593 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:20.595 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:20.595  INFO 13216 --- [http-nio-8083-exec-10] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:20.680  INFO 13216 --- [rpcDispatch_RMROLE_1_15_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637963,branchId=8683228701762637967,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:20.680  INFO 13216 --- [rpcDispatch_RMROLE_1_15_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637963 8683228701762637967 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:20.680  INFO 13216 --- [rpcDispatch_RMROLE_1_15_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:20.695  INFO 13216 --- [rpcDispatch_RMROLE_1_16_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637971,branchId=8683228701762637975,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:20.695  INFO 13216 --- [rpcDispatch_RMROLE_1_16_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637971 8683228701762637975 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:20.695  INFO 13216 --- [rpcDispatch_RMROLE_1_16_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:20.710  INFO 13216 --- [rpcDispatch_RMROLE_1_17_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637979,branchId=8683228701762637983,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:20.710  INFO 13216 --- [rpcDispatch_RMROLE_1_17_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637979 8683228701762637983 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:20.710  INFO 13216 --- [rpcDispatch_RMROLE_1_17_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:20.967  INFO 13216 --- [http-nio-8083-exec-2] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:20.967 DEBUG 13216 --- [http-nio-8083-exec-2] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:20.967 DEBUG 13216 --- [http-nio-8083-exec-2] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:20.969 DEBUG 13216 --- [http-nio-8083-exec-2] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:20.969  INFO 13216 --- [http-nio-8083-exec-2] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:21.683  INFO 13216 --- [rpcDispatch_RMROLE_1_18_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762637993,branchId=8683228701762637997,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:21.683  INFO 13216 --- [rpcDispatch_RMROLE_1_18_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762637993 8683228701762637997 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:21.683  INFO 13216 --- [rpcDispatch_RMROLE_1_18_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:22.637  INFO 13216 --- [http-nio-8083-exec-4] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:22.637 DEBUG 13216 --- [http-nio-8083-exec-4] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:22.637 DEBUG 13216 --- [http-nio-8083-exec-4] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:22.639 DEBUG 13216 --- [http-nio-8083-exec-4] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:22.640  INFO 13216 --- [http-nio-8083-exec-4] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:22.682  INFO 13216 --- [rpcDispatch_RMROLE_1_19_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762638003,branchId=8683228701762638007,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:22.682  INFO 13216 --- [rpcDispatch_RMROLE_1_19_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762638003 8683228701762638007 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:22.682  INFO 13216 --- [rpcDispatch_RMROLE_1_19_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:22.846  INFO 13216 --- [http-nio-8083-exec-5] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:22.846 DEBUG 13216 --- [http-nio-8083-exec-5] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:22.846 DEBUG 13216 --- [http-nio-8083-exec-5] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:22.848 DEBUG 13216 --- [http-nio-8083-exec-5] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:22.848  INFO 13216 --- [http-nio-8083-exec-5] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:23.318  INFO 13216 --- [http-nio-8083-exec-7] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:23.318 DEBUG 13216 --- [http-nio-8083-exec-7] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:23.318 DEBUG 13216 --- [http-nio-8083-exec-7] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:23.320 DEBUG 13216 --- [http-nio-8083-exec-7] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:23.320  INFO 13216 --- [http-nio-8083-exec-7] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:23.681  INFO 13216 --- [rpcDispatch_RMROLE_1_20_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762638013,branchId=8683228701762638017,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:23.682  INFO 13216 --- [rpcDispatch_RMROLE_1_20_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762638013 8683228701762638017 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:23.682  INFO 13216 --- [rpcDispatch_RMROLE_1_20_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:23.698  INFO 13216 --- [rpcDispatch_RMROLE_1_21_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762638021,branchId=8683228701762638025,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:23.698  INFO 13216 --- [rpcDispatch_RMROLE_1_21_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762638021 8683228701762638025 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:23.698  INFO 13216 --- [rpcDispatch_RMROLE_1_21_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:23.701  INFO 13216 --- [http-nio-8083-exec-8] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:23.701 DEBUG 13216 --- [http-nio-8083-exec-8] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:23.701 DEBUG 13216 --- [http-nio-8083-exec-8] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:23.704 DEBUG 13216 --- [http-nio-8083-exec-8] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:23.704  INFO 13216 --- [http-nio-8083-exec-8] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:23.995  INFO 13216 --- [http-nio-8083-exec-10] m.a.service.impl.AccountServiceImpl      : 开始扣款
-2022-07-27 13:48:23.995 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 0 where user_id = ?
-2022-07-27 13:48:23.995 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
-2022-07-27 13:48:23.997 DEBUG 13216 --- [http-nio-8083-exec-10] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
-2022-07-27 13:48:23.997  INFO 13216 --- [http-nio-8083-exec-10] m.a.service.impl.AccountServiceImpl      : 扣款成功
-2022-07-27 13:48:24.689  INFO 13216 --- [rpcDispatch_RMROLE_1_22_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762638033,branchId=8683228701762638037,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:24.689  INFO 13216 --- [rpcDispatch_RMROLE_1_22_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762638033 8683228701762638037 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:24.689  INFO 13216 --- [rpcDispatch_RMROLE_1_22_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:48:24.703  INFO 13216 --- [rpcDispatch_RMROLE_1_23_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.31.160.1:8091:8683228701762638041,branchId=8683228701762638045,branchType=AT,resourceId=jdbc:mysql://localhost:3306/seata_demo,applicationData=null
-2022-07-27 13:48:24.703  INFO 13216 --- [rpcDispatch_RMROLE_1_23_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.31.160.1:8091:8683228701762638041 8683228701762638045 jdbc:mysql://localhost:3306/seata_demo null
-2022-07-27 13:48:24.703  INFO 13216 --- [rpcDispatch_RMROLE_1_23_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
-2022-07-27 13:51:12.220  WARN 13216 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-2022-07-27 13:51:12.220  WARN 13216 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-2022-07-27 13:51:12.220  WARN 13216 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-2022-07-27 13:51:12.221  WARN 13216 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-2022-07-27 13:51:12.244  INFO 13216 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2022-07-27 13:51:12.246  INFO 13216 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-2022-07-27 13:51:12.248  INFO 13216 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-2022-07-27 13:51:18.286  WARN 13216 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
-2022-07-27 13:51:18.286  INFO 13216 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-07-27 13:51:18.288  INFO 13216 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-07-27 13:51:18.290  INFO 13216 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2022-07-27 13:51:18.292  INFO 13216 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x7ae5eec0, L:/172.31.160.1:50361 ! R:/172.31.160.1:8091]
-2022-07-27 13:51:18.292  INFO 13216 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x7ae5eec0, L:/172.31.160.1:50361 ! R:/172.31.160.1:8091]
-2022-07-27 13:51:18.292  INFO 13216 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x7ae5eec0, L:/172.31.160.1:50361 ! R:/172.31.160.1:8091]
-2022-07-27 13:51:18.292  INFO 13216 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x7ae5eec0, L:/172.31.160.1:50361 ! R:/172.31.160.1:8091]
-2022-07-27 13:51:18.292  INFO 13216 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x7ae5eec0, L:/172.31.160.1:50361 ! R:/172.31.160.1:8091]) will closed
-2022-07-27 13:51:18.292  INFO 13216 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x7ae5eec0, L:/172.31.160.1:50361 ! R:/172.31.160.1:8091]) will closed
-2022-07-27 13:51:18.294  INFO 13216 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x3a545958, L:/172.31.160.1:50118 ! R:/172.31.160.1:8091]
-2022-07-27 13:51:18.294  INFO 13216 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x3a545958, L:/172.31.160.1:50118 ! R:/172.31.160.1:8091]
-2022-07-27 13:51:18.294  INFO 13216 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x3a545958, L:/172.31.160.1:50118 ! R:/172.31.160.1:8091]
-2022-07-27 13:51:18.294  INFO 13216 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x3a545958, L:/172.31.160.1:50118 ! R:/172.31.160.1:8091]
-2022-07-27 13:51:18.294  INFO 13216 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x3a545958, L:/172.31.160.1:50118 ! R:/172.31.160.1:8091]) will closed
-2022-07-27 13:51:18.294  INFO 13216 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x3a545958, L:/172.31.160.1:50118 ! R:/172.31.160.1:8091]) will closed
+2022-07-28 14:38:13.704  INFO 4832 --- [main] m.a.AccountServiceApplication            : No active profile set, falling back to default profiles: default
+2022-07-28 14:38:14.371  INFO 4832 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=90dd028d-ac32-3306-b208-22e707e0a7b2
+2022-07-28 14:38:14.384  INFO 4832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:38:14.421  INFO 4832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:38:14.428  INFO 4832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:38:14.432  INFO 4832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:38:14.434  INFO 4832 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+2022-07-28 14:38:14.439  INFO 4832 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
+2022-07-28 14:38:14.490  INFO 4832 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-07-28 14:38:14.494  INFO 4832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:38:14.503  INFO 4832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:38:14.789  INFO 4832 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+2022-07-28 14:38:14.934  INFO 4832 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-28 14:38:14.934  INFO 4832 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[account-service] txServiceGroup[seata-tx-service-group]
+2022-07-28 14:38:14.946  INFO 4832 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+2022-07-28 14:38:14.947  INFO 4832 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+2022-07-28 14:38:14.959  INFO 4832 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-28 14:38:14.959  INFO 4832 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[account-service] txServiceGroup[seata-tx-service-group]
+2022-07-28 14:38:14.959  INFO 4832 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+2022-07-28 14:38:14.962  INFO 4832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:38:15.219  INFO 4832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-07-28 14:38:15.227  INFO 4832 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-28 14:38:15.228  INFO 4832 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-28 14:38:15.344  INFO 4832 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-28 14:38:15.344  INFO 4832 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1620 ms
+2022-07-28 14:38:15.414  INFO 4832 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-28 14:38:15.523  INFO 4832 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-28 14:38:15.534  INFO 4832 --- [main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy of [dataSource]
+2022-07-28 14:38:15.918  INFO 4832 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.22.144.1:8091
+2022-07-28 14:38:15.918  INFO 4832 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://localhost:3306/seata_demo
+2022-07-28 14:38:15.921  INFO 4832 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:172.22.144.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://localhost:3306/seata_demo', applicationId='account-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-28 14:38:16.209  INFO 4832 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.4.2, server version:1.4.2,channel:[id: 0xa544ebf6, L:/172.22.144.1:58738 - R:/172.22.144.1:8091]
+2022-07-28 14:38:16.215  INFO 4832 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 175 ms, version:1.4.2,role:RMROLE,channel:[id: 0xa544ebf6, L:/172.22.144.1:58738 - R:/172.22.144.1:8091]
+2022-07-28 14:38:16.655  INFO 4832 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : will register resourceId:prepare
+2022-07-28 14:38:16.658  INFO 4832 --- [main] i.s.s.a.GlobalTransactionScanner         : Bean[mao.accountservice.service.impl.AccountTCCServiceImpl$$EnhancerBySpringCGLIB$$85bf2a6d] with name [accountTCCServiceImpl] would use interceptor [io.seata.spring.tcc.TccActionInterceptor]
+2022-07-28 14:38:16.658  INFO 4832 --- [NettyClientSelector_RMROLE_1_1] io.seata.rm.AbstractRMHandler            : the rm client received response msg [version=1.4.2,extraData=null,identified=true,resultCode=null,msg=null] from tc server.
+2022-07-28 14:38:16.710  WARN 4832 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-28 14:38:16.710  INFO 4832 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 14:38:16.715  WARN 4832 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-28 14:38:16.715  INFO 4832 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 14:38:16.865  INFO 4832 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 14:38:17.135  INFO 4832 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-28 14:38:17.547  INFO 4832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2022-07-28 14:38:17.581  INFO 4832 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP account-service 192.168.202.1:8083 register finished
+2022-07-28 14:38:17.699  INFO 4832 --- [main] m.a.AccountServiceApplication            : Started AccountServiceApplication in 4.837 seconds (JVM running for 6.08)
+2022-07-28 14:39:14.926  INFO 4832 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.22.144.1:8091
+2022-07-28 14:39:14.927  INFO 4832 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:172.22.144.1:8091,msg:< RegisterTMRequest{applicationId='account-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-28 14:39:14.937  INFO 4832 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.4.2, server version:1.4.2,channel:[id: 0x3543902d, L:/172.22.144.1:58985 - R:/172.22.144.1:8091]
+2022-07-28 14:39:14.938  INFO 4832 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 9 ms, version:1.4.2,role:TMROLE,channel:[id: 0x3543902d, L:/172.22.144.1:58985 - R:/172.22.144.1:8091]
+2022-07-28 14:39:52.560  INFO 4832 --- [rpcDispatch_RMROLE_1_1_32] i.s.c.r.p.client.RmUndoLogProcessor      : rm handle undo log process:UndoLogDeleteRequest{resourceId='prepare', saveDays=7, branchType=AT}
+2022-07-28 14:39:52.560  WARN 4832 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.RMHandlerAT                  : Failed to get dataSourceProxy for delete undolog on prepare
+2022-07-28 14:45:51.318  INFO 4832 --- [http-nio-8083-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 14:45:51.319  INFO 4832 --- [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-28 14:45:51.322  INFO 4832 --- [http-nio-8083-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-07-28 14:45:51.404  WARN 4832 --- [http-nio-8083-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false, version : 1.2.8, lastPacketReceivedIdleMillis : 455704
+2022-07-28 14:45:51.411 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.service.impl.AccountTCCServiceImpl   : 开始执行prepare方法，用户id为user202103032042012，事务id为172.22.144.1:8091:360576963514531841
+2022-07-28 14:45:51.411 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.service.impl.AccountTCCServiceImpl   : 开始查询冻结记录
+2022-07-28 14:45:51.425 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.m.AccountFreezeMapper.selectById     : ==>  Preparing: SELECT xid,user_id,freeze_money,state FROM account_freeze_tbl WHERE xid=?
+2022-07-28 14:45:51.440 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.m.AccountFreezeMapper.selectById     : ==> Parameters: 172.22.144.1:8091:360576963514531841(String)
+2022-07-28 14:45:51.452 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.m.AccountFreezeMapper.selectById     : <==      Total: 0
+2022-07-28 14:45:51.453 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.service.impl.AccountTCCServiceImpl   : 开始冻结金额，金额为20
+2022-07-28 14:45:51.463 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.mapper.AccountFreezeMapper.insert    : ==>  Preparing: INSERT INTO account_freeze_tbl ( xid, user_id, freeze_money, state ) VALUES ( ?, ?, ?, ? )
+2022-07-28 14:45:51.464 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.mapper.AccountFreezeMapper.insert    : ==> Parameters: 172.22.144.1:8091:360576963514531841(String), user202103032042012(String), 20(Integer), 0(Integer)
+2022-07-28 14:45:51.465 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.mapper.AccountFreezeMapper.insert    : <==    Updates: 1
+2022-07-28 14:45:51.465 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.service.impl.AccountTCCServiceImpl   : 开始扣除可用的余额
+2022-07-28 14:45:51.466 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 20 where user_id = ?
+2022-07-28 14:45:51.467 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
+2022-07-28 14:45:51.468 DEBUG 4832 --- [http-nio-8083-exec-6] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
+2022-07-28 14:45:51.856  INFO 4832 --- [rpcDispatch_RMROLE_1_2_32] i.s.c.r.p.c.RmBranchRollbackProcessor    : rm handle branch rollback process:xid=172.22.144.1:8091:360576963514531841,branchId=360576963514531845,branchType=TCC,resourceId=prepare,applicationData={"actionContext":{"action-start-time":1658990751341,"money":20,"sys::prepare":"prepare","sys::rollback":"cancel","sys::commit":"confirm","host-name":"172.22.144.1","userId":"user202103032042012","actionName":"prepare"}}
+2022-07-28 14:45:51.857  INFO 4832 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractRMHandler            : Branch Rollbacking: 172.22.144.1:8091:360576963514531841 360576963514531845 prepare
+2022-07-28 14:45:51.864 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.service.impl.AccountTCCServiceImpl   : 开始执行cancel方法，xid为172.22.144.1:8091:360576963514531841
+2022-07-28 14:45:51.864 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.service.impl.AccountTCCServiceImpl   : 开始查询冻结记录
+2022-07-28 14:45:51.864 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.m.AccountFreezeMapper.selectById     : ==>  Preparing: SELECT xid,user_id,freeze_money,state FROM account_freeze_tbl WHERE xid=?
+2022-07-28 14:45:51.864 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.m.AccountFreezeMapper.selectById     : ==> Parameters: 172.22.144.1:8091:360576963514531841(String)
+2022-07-28 14:45:51.866 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.m.AccountFreezeMapper.selectById     : <==      Total: 1
+2022-07-28 14:45:51.866 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.service.impl.AccountTCCServiceImpl   : 开始将冻结金额设置为0
+2022-07-28 14:45:51.871 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.m.AccountFreezeMapper.updateById     : ==>  Preparing: UPDATE account_freeze_tbl SET user_id=?, freeze_money=?, state=? WHERE xid=?
+2022-07-28 14:45:51.872 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.m.AccountFreezeMapper.updateById     : ==> Parameters: user202103032042012(String), 0(Integer), 2(Integer), 172.22.144.1:8091:360576963514531841(String)
+2022-07-28 14:45:51.873 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.m.AccountFreezeMapper.updateById     : <==    Updates: 1
+2022-07-28 14:45:51.874 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.service.impl.AccountTCCServiceImpl   : 开始恢复可用余额
+2022-07-28 14:45:51.874 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.mapper.AccountMapper.refund          : ==>  Preparing: update account_tbl set money = money + 0 where user_id = ?
+2022-07-28 14:45:51.874 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.mapper.AccountMapper.refund          : ==> Parameters: user202103032042012(String)
+2022-07-28 14:45:51.875 DEBUG 4832 --- [rpcDispatch_RMROLE_1_2_32] m.a.mapper.AccountMapper.refund          : <==    Updates: 1
+2022-07-28 14:45:51.877  INFO 4832 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractResourceManager      : TCC resource rollback result : true, xid: 172.22.144.1:8091:360576963514531841, branchId: 360576963514531845, resourceId: prepare
+2022-07-28 14:45:51.877  INFO 4832 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractRMHandler            : Branch Rollbacked result: PhaseTwo_Rollbacked
+2022-07-28 14:54:18.924  WARN 4832 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-28 14:54:18.924  WARN 4832 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-28 14:54:18.924  WARN 4832 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-28 14:54:18.925  WARN 4832 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-28 14:54:18.947  INFO 4832 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-28 14:54:18.950  INFO 4832 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-28 14:54:18.952  INFO 4832 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-28 14:54:21.972  WARN 4832 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-28 14:54:21.973  INFO 4832 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-28 14:54:21.974  INFO 4832 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-28 14:54:21.976  INFO 4832 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-28 14:54:21.979  INFO 4832 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x3543902d, L:/172.22.144.1:58985 ! R:/172.22.144.1:8091]
+2022-07-28 14:54:21.979  INFO 4832 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x3543902d, L:/172.22.144.1:58985 ! R:/172.22.144.1:8091]
+2022-07-28 14:54:21.979  INFO 4832 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x3543902d, L:/172.22.144.1:58985 ! R:/172.22.144.1:8091]
+2022-07-28 14:54:21.980  INFO 4832 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x3543902d, L:/172.22.144.1:58985 ! R:/172.22.144.1:8091]
+2022-07-28 14:54:21.980  INFO 4832 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0xa544ebf6, L:/172.22.144.1:58738 ! R:/172.22.144.1:8091]
+2022-07-28 14:54:21.980  INFO 4832 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0xa544ebf6, L:/172.22.144.1:58738 ! R:/172.22.144.1:8091]
+2022-07-28 14:54:21.980  INFO 4832 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0xa544ebf6, L:/172.22.144.1:58738 ! R:/172.22.144.1:8091]
+2022-07-28 14:54:21.980  INFO 4832 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0xa544ebf6, L:/172.22.144.1:58738 ! R:/172.22.144.1:8091]
+2022-07-28 14:54:21.980  INFO 4832 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xa544ebf6, L:/172.22.144.1:58738 ! R:/172.22.144.1:8091]) will closed
+2022-07-28 14:54:21.980  INFO 4832 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x3543902d, L:/172.22.144.1:58985 ! R:/172.22.144.1:8091]) will closed
+2022-07-28 14:54:21.980  INFO 4832 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xa544ebf6, L:/172.22.144.1:58738 ! R:/172.22.144.1:8091]) will closed
+2022-07-28 14:54:21.980  INFO 4832 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x3543902d, L:/172.22.144.1:58985 ! R:/172.22.144.1:8091]) will closed
+2022-07-28 14:54:26.538  INFO 19700 --- [main] m.a.AccountServiceApplication            : No active profile set, falling back to default profiles: default
+2022-07-28 14:54:27.146  INFO 19700 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=90dd028d-ac32-3306-b208-22e707e0a7b2
+2022-07-28 14:54:27.160  INFO 19700 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:54:27.189  INFO 19700 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:54:27.196  INFO 19700 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:54:27.200  INFO 19700 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:54:27.201  INFO 19700 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+2022-07-28 14:54:27.204  INFO 19700 --- [main] io.seata.config.FileConfiguration        : The file name of the operation is registry
+2022-07-28 14:54:27.243  INFO 19700 --- [main] io.seata.config.ConfigurationFactory     : load Configuration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+2022-07-28 14:54:27.246  INFO 19700 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:54:27.252  INFO 19700 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configNacosProperties' of type [io.seata.spring.boot.autoconfigure.properties.config.ConfigNacosProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:54:27.504  INFO 19700 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+2022-07-28 14:54:27.645  INFO 19700 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-28 14:54:27.646  INFO 19700 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[account-service] txServiceGroup[seata-tx-service-group]
+2022-07-28 14:54:27.658  INFO 19700 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+2022-07-28 14:54:27.659  INFO 19700 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+2022-07-28 14:54:27.664  INFO 19700 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+2022-07-28 14:54:27.665  INFO 19700 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[account-service] txServiceGroup[seata-tx-service-group]
+2022-07-28 14:54:27.665  INFO 19700 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+2022-07-28 14:54:27.667  INFO 19700 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-28 14:54:27.913  INFO 19700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-07-28 14:54:27.922  INFO 19700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-28 14:54:27.922  INFO 19700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-28 14:54:28.077  INFO 19700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-28 14:54:28.078  INFO 19700 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1526 ms
+2022-07-28 14:54:28.189  INFO 19700 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-28 14:54:28.309  INFO 19700 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-28 14:54:28.325  INFO 19700 --- [main] .s.s.a.d.SeataAutoDataSourceProxyCreator : Auto proxy of [dataSource]
+2022-07-28 14:54:28.686  INFO 19700 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.22.144.1:8091
+2022-07-28 14:54:28.687  INFO 19700 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://localhost:3306/seata_demo
+2022-07-28 14:54:28.688  INFO 19700 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:172.22.144.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://localhost:3306/seata_demo', applicationId='account-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-28 14:54:28.849  INFO 19700 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.4.2, server version:1.4.2,channel:[id: 0x66bb90e0, L:/172.22.144.1:63614 - R:/172.22.144.1:8091]
+2022-07-28 14:54:28.856  INFO 19700 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 61 ms, version:1.4.2,role:RMROLE,channel:[id: 0x66bb90e0, L:/172.22.144.1:63614 - R:/172.22.144.1:8091]
+2022-07-28 14:54:29.283  INFO 19700 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : will register resourceId:prepare
+2022-07-28 14:54:29.286  INFO 19700 --- [NettyClientSelector_RMROLE_1_1] io.seata.rm.AbstractRMHandler            : the rm client received response msg [version=1.4.2,extraData=null,identified=true,resultCode=null,msg=null] from tc server.
+2022-07-28 14:54:29.287  INFO 19700 --- [main] i.s.s.a.GlobalTransactionScanner         : Bean[mao.accountservice.service.impl.AccountTCCServiceImpl$$EnhancerBySpringCGLIB$$8590aab] with name [accountTCCServiceImpl] would use interceptor [io.seata.spring.tcc.TccActionInterceptor]
+2022-07-28 14:54:29.324  WARN 19700 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-28 14:54:29.325  INFO 19700 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 14:54:29.327  WARN 19700 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-28 14:54:29.328  INFO 19700 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-28 14:54:29.440  INFO 19700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-28 14:54:29.680  INFO 19700 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-28 14:54:30.151  INFO 19700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2022-07-28 14:54:30.161  INFO 19700 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP account-service 192.168.202.1:8083 register finished
+2022-07-28 14:54:30.306  INFO 19700 --- [main] m.a.AccountServiceApplication            : Started AccountServiceApplication in 4.601 seconds (JVM running for 5.174)
+2022-07-28 14:55:27.627  INFO 19700 --- [timeoutChecker_1_1] i.s.c.r.netty.NettyClientChannelManager  : will connect to 172.22.144.1:8091
+2022-07-28 14:55:27.628  INFO 19700 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:172.22.144.1:8091,msg:< RegisterTMRequest{applicationId='account-service', transactionServiceGroup='seata-tx-service-group'} >
+2022-07-28 14:55:27.636  INFO 19700 --- [timeoutChecker_1_1] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.4.2, server version:1.4.2,channel:[id: 0xe31f11be, L:/172.22.144.1:63897 - R:/172.22.144.1:8091]
+2022-07-28 14:55:27.636  INFO 19700 --- [timeoutChecker_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 6 ms, version:1.4.2,role:TMROLE,channel:[id: 0xe31f11be, L:/172.22.144.1:63897 - R:/172.22.144.1:8091]
+2022-07-28 14:56:36.453  INFO 19700 --- [http-nio-8083-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-28 14:56:36.454  INFO 19700 --- [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-28 14:56:36.458  INFO 19700 --- [http-nio-8083-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-07-28 14:56:36.535  WARN 19700 --- [http-nio-8083-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false, version : 1.2.8, lastPacketReceivedIdleMillis : 128052
+2022-07-28 14:56:36.544 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.service.impl.AccountTCCServiceImpl   : 开始执行prepare方法，用户id为user202103032042012，事务id为172.22.144.1:8091:360576963514531849
+2022-07-28 14:56:36.544 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.service.impl.AccountTCCServiceImpl   : 开始查询冻结记录
+2022-07-28 14:56:36.558 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.m.AccountFreezeMapper.selectById     : ==>  Preparing: SELECT xid,user_id,freeze_money,state FROM account_freeze_tbl WHERE xid=?
+2022-07-28 14:56:36.574 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.m.AccountFreezeMapper.selectById     : ==> Parameters: 172.22.144.1:8091:360576963514531849(String)
+2022-07-28 14:56:36.591 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.m.AccountFreezeMapper.selectById     : <==      Total: 0
+2022-07-28 14:56:36.592 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.service.impl.AccountTCCServiceImpl   : 开始冻结金额，金额为20
+2022-07-28 14:56:36.604 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.mapper.AccountFreezeMapper.insert    : ==>  Preparing: INSERT INTO account_freeze_tbl ( xid, user_id, freeze_money, state ) VALUES ( ?, ?, ?, ? )
+2022-07-28 14:56:36.605 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.mapper.AccountFreezeMapper.insert    : ==> Parameters: 172.22.144.1:8091:360576963514531849(String), user202103032042012(String), 20(Integer), 0(Integer)
+2022-07-28 14:56:36.606 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.mapper.AccountFreezeMapper.insert    : <==    Updates: 1
+2022-07-28 14:56:36.606 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.service.impl.AccountTCCServiceImpl   : 开始扣除可用的余额
+2022-07-28 14:56:36.608 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 20 where user_id = ?
+2022-07-28 14:56:36.608 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
+2022-07-28 14:56:36.609 DEBUG 19700 --- [http-nio-8083-exec-8] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
+2022-07-28 14:56:36.998  INFO 19700 --- [rpcDispatch_RMROLE_1_1_32] i.s.c.r.p.c.RmBranchRollbackProcessor    : rm handle branch rollback process:xid=172.22.144.1:8091:360576963514531849,branchId=360576963514531853,branchType=TCC,resourceId=prepare,applicationData={"actionContext":{"action-start-time":1658991396477,"money":20,"sys::prepare":"prepare","sys::rollback":"cancel","sys::commit":"confirm","host-name":"172.22.144.1","userId":"user202103032042012","actionName":"prepare"}}
+2022-07-28 14:56:36.999  INFO 19700 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch Rollbacking: 172.22.144.1:8091:360576963514531849 360576963514531853 prepare
+2022-07-28 14:56:37.006 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.service.impl.AccountTCCServiceImpl   : 开始执行cancel方法，xid为172.22.144.1:8091:360576963514531849
+2022-07-28 14:56:37.006 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.service.impl.AccountTCCServiceImpl   : 开始查询冻结记录
+2022-07-28 14:56:37.007 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.m.AccountFreezeMapper.selectById     : ==>  Preparing: SELECT xid,user_id,freeze_money,state FROM account_freeze_tbl WHERE xid=?
+2022-07-28 14:56:37.007 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.m.AccountFreezeMapper.selectById     : ==> Parameters: 172.22.144.1:8091:360576963514531849(String)
+2022-07-28 14:56:37.009 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.m.AccountFreezeMapper.selectById     : <==      Total: 1
+2022-07-28 14:56:37.009 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.service.impl.AccountTCCServiceImpl   : 开始将冻结金额设置为0
+2022-07-28 14:56:37.014 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.m.AccountFreezeMapper.updateById     : ==>  Preparing: UPDATE account_freeze_tbl SET user_id=?, freeze_money=?, state=? WHERE xid=?
+2022-07-28 14:56:37.015 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.m.AccountFreezeMapper.updateById     : ==> Parameters: user202103032042012(String), 0(Integer), 2(Integer), 172.22.144.1:8091:360576963514531849(String)
+2022-07-28 14:56:37.017 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.m.AccountFreezeMapper.updateById     : <==    Updates: 1
+2022-07-28 14:56:37.017 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.service.impl.AccountTCCServiceImpl   : 开始恢复可用余额
+2022-07-28 14:56:37.017 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.mapper.AccountMapper.refund          : ==>  Preparing: update account_tbl set money = money + 20 where user_id = ?
+2022-07-28 14:56:37.017 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.mapper.AccountMapper.refund          : ==> Parameters: user202103032042012(String)
+2022-07-28 14:56:37.018 DEBUG 19700 --- [rpcDispatch_RMROLE_1_1_32] m.a.mapper.AccountMapper.refund          : <==    Updates: 1
+2022-07-28 14:56:37.020  INFO 19700 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractResourceManager      : TCC resource rollback result : true, xid: 172.22.144.1:8091:360576963514531849, branchId: 360576963514531853, resourceId: prepare
+2022-07-28 14:56:37.021  INFO 19700 --- [rpcDispatch_RMROLE_1_1_32] io.seata.rm.AbstractRMHandler            : Branch Rollbacked result: PhaseTwo_Rollbacked
+2022-07-28 15:03:25.285  WARN 19700 --- [http-nio-8083-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/seata_demo?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false, version : 1.2.8, lastPacketReceivedIdleMillis : 408265
+2022-07-28 15:03:25.289 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.service.impl.AccountTCCServiceImpl   : 开始执行prepare方法，用户id为user202103032042012，事务id为172.22.144.1:8091:360576963514531857
+2022-07-28 15:03:25.289 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.service.impl.AccountTCCServiceImpl   : 开始查询冻结记录
+2022-07-28 15:03:25.289 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.m.AccountFreezeMapper.selectById     : ==>  Preparing: SELECT xid,user_id,freeze_money,state FROM account_freeze_tbl WHERE xid=?
+2022-07-28 15:03:25.290 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.m.AccountFreezeMapper.selectById     : ==> Parameters: 172.22.144.1:8091:360576963514531857(String)
+2022-07-28 15:03:25.290 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.m.AccountFreezeMapper.selectById     : <==      Total: 0
+2022-07-28 15:03:25.291 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.service.impl.AccountTCCServiceImpl   : 开始冻结金额，金额为30
+2022-07-28 15:03:25.291 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.mapper.AccountFreezeMapper.insert    : ==>  Preparing: INSERT INTO account_freeze_tbl ( xid, user_id, freeze_money, state ) VALUES ( ?, ?, ?, ? )
+2022-07-28 15:03:25.291 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.mapper.AccountFreezeMapper.insert    : ==> Parameters: 172.22.144.1:8091:360576963514531857(String), user202103032042012(String), 30(Integer), 0(Integer)
+2022-07-28 15:03:25.292 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.mapper.AccountFreezeMapper.insert    : <==    Updates: 1
+2022-07-28 15:03:25.292 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.service.impl.AccountTCCServiceImpl   : 开始扣除可用的余额
+2022-07-28 15:03:25.293 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.mapper.AccountMapper.deduct          : ==>  Preparing: update account_tbl set money = money - 30 where user_id = ?
+2022-07-28 15:03:25.293 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.mapper.AccountMapper.deduct          : ==> Parameters: user202103032042012(String)
+2022-07-28 15:03:25.294 DEBUG 19700 --- [http-nio-8083-exec-5] m.a.mapper.AccountMapper.deduct          : <==    Updates: 1
+2022-07-28 15:03:25.370  INFO 19700 --- [rpcDispatch_RMROLE_1_2_32] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=172.22.144.1:8091:360576963514531857,branchId=360576963514531861,branchType=TCC,resourceId=prepare,applicationData={"actionContext":{"action-start-time":1658991805279,"money":30,"sys::prepare":"prepare","sys::rollback":"cancel","sys::commit":"confirm","host-name":"172.22.144.1","userId":"user202103032042012","actionName":"prepare"}}
+2022-07-28 15:03:25.370  INFO 19700 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractRMHandler            : Branch committing: 172.22.144.1:8091:360576963514531857 360576963514531861 prepare {"actionContext":{"action-start-time":1658991805279,"money":30,"sys::prepare":"prepare","sys::rollback":"cancel","sys::commit":"confirm","host-name":"172.22.144.1","userId":"user202103032042012","actionName":"prepare"}}
+2022-07-28 15:03:25.371 DEBUG 19700 --- [rpcDispatch_RMROLE_1_2_32] m.a.service.impl.AccountTCCServiceImpl   : 开始执行confirm方法，xid为172.22.144.1:8091:360576963514531857
+2022-07-28 15:03:25.371 DEBUG 19700 --- [rpcDispatch_RMROLE_1_2_32] m.a.service.impl.AccountTCCServiceImpl   : 开始删除冻结记录
+2022-07-28 15:03:25.371 DEBUG 19700 --- [rpcDispatch_RMROLE_1_2_32] m.a.m.AccountFreezeMapper.deleteById     : ==>  Preparing: DELETE FROM account_freeze_tbl WHERE xid=?
+2022-07-28 15:03:25.371 DEBUG 19700 --- [rpcDispatch_RMROLE_1_2_32] m.a.m.AccountFreezeMapper.deleteById     : ==> Parameters: 172.22.144.1:8091:360576963514531857(String)
+2022-07-28 15:03:25.374 DEBUG 19700 --- [rpcDispatch_RMROLE_1_2_32] m.a.m.AccountFreezeMapper.deleteById     : <==    Updates: 1
+2022-07-28 15:03:25.374  INFO 19700 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractResourceManager      : TCC resource commit result : true, xid: 172.22.144.1:8091:360576963514531857, branchId: 360576963514531861, resourceId: prepare
+2022-07-28 15:03:25.374  INFO 19700 --- [rpcDispatch_RMROLE_1_2_32] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
+2022-07-28 15:15:50.056  WARN 19700 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-28 15:15:50.056  WARN 19700 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-28 15:15:50.056  WARN 19700 --- [Thread-13] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-28 15:15:50.057  WARN 19700 --- [Thread-3] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-28 15:15:50.078  INFO 19700 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-28 15:15:50.080  INFO 19700 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-28 15:15:50.082  INFO 19700 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-28 15:15:54.623  WARN 19700 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-28 15:15:54.624  INFO 19700 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-28 15:15:54.626  INFO 19700 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-28 15:15:54.627  INFO 19700 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-28 15:15:54.629  INFO 19700 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0xe31f11be, L:/172.22.144.1:63897 ! R:/172.22.144.1:8091]
+2022-07-28 15:15:54.629  INFO 19700 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0xe31f11be, L:/172.22.144.1:63897 ! R:/172.22.144.1:8091]
+2022-07-28 15:15:54.629  INFO 19700 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0xe31f11be, L:/172.22.144.1:63897 ! R:/172.22.144.1:8091]
+2022-07-28 15:15:54.629  INFO 19700 --- [NettyClientSelector_TMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0xe31f11be, L:/172.22.144.1:63897 ! R:/172.22.144.1:8091]
+2022-07-28 15:15:54.629  INFO 19700 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xe31f11be, L:/172.22.144.1:63897 ! R:/172.22.144.1:8091]) will closed
+2022-07-28 15:15:54.629  INFO 19700 --- [NettyClientSelector_TMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0xe31f11be, L:/172.22.144.1:63897 ! R:/172.22.144.1:8091]) will closed
+2022-07-28 15:15:54.632  INFO 19700 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x66bb90e0, L:/172.22.144.1:63614 ! R:/172.22.144.1:8091]
+2022-07-28 15:15:54.632  INFO 19700 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x66bb90e0, L:/172.22.144.1:63614 ! R:/172.22.144.1:8091]
+2022-07-28 15:15:54.632  INFO 19700 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x66bb90e0, L:/172.22.144.1:63614 ! R:/172.22.144.1:8091]
+2022-07-28 15:15:54.632  INFO 19700 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x66bb90e0, L:/172.22.144.1:63614 ! R:/172.22.144.1:8091]
+2022-07-28 15:15:54.632  INFO 19700 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x66bb90e0, L:/172.22.144.1:63614 ! R:/172.22.144.1:8091]) will closed
+2022-07-28 15:15:54.632  INFO 19700 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x66bb90e0, L:/172.22.144.1:63614 ! R:/172.22.144.1:8091]) will closed

@@ -1,6 +1,7 @@
 package mao.accountservice.controller;
 
 import mao.accountservice.service.AccountService;
+import mao.accountservice.service.AccountTCCService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -29,6 +30,9 @@ public class AccountController
     @Resource
     private AccountService accountService;
 
+    @Resource
+    private AccountTCCService accountTCCService;
+
     /**
      * 扣钱
      *
@@ -39,7 +43,8 @@ public class AccountController
     @PutMapping("/{userId}/{money}")
     public ResponseEntity<Void> deduct(@PathVariable("userId") String userId, @PathVariable("money") Integer money)
     {
-        accountService.deduct(userId, money);
+        //accountService.deduct(userId, money);
+        accountTCCService.prepare(userId, money);
         return ResponseEntity.noContent().build();
     }
 }
